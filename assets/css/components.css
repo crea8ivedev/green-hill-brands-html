@@ -1,5 +1,5 @@
 .container-fluid {
-    @apply px-100 max-1440:px-80 max-1199:px-60 max-992:px-30;
+    @apply px-100 max-1440:px-80 max-1199:px-60 max-992:px-30 min-[2000px]:max-w-1880 mx-auto;
 }
 
 .container-55 {

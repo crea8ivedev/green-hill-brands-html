@@ -68,7 +68,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  @apply font-heading font-bold;
+  @apply font-heading font-bold capitalize;
 }
 h1 , .h1 {
   @apply text-heading-1 leading-71  max-1440:text-heading-tablet-1 max-1440:leading-55 max-1199:text-heading-mobile-1 max-1199:leading-40;

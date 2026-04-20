@@ -162,3 +162,130 @@ accordionToggle.addEventListener('click', function (e) {
     });
 
 });
+
+/* =============================================
+   STICKY HEADER ON SCROLL
+============================================= */
+const stickyHeader = document.querySelector('.header');
+const headerHeight = stickyHeader.offsetHeight;
+
+// Add transition style for smooth effect
+stickyHeader.style.transition = 'background 0.3s ease, box-shadow 0.3s ease, top 0.3s ease';
+
+window.addEventListener('scroll', function () {
+    if (window.scrollY > headerHeight) {
+        stickyHeader.classList.add('header-sticky');
+    } else {
+        stickyHeader.classList.remove('header-sticky');
+    }
+});
+
+
+
+// hero banner video 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const isMobile = window.innerWidth < 992;
+
+    // Select the active video wrapper based on viewport
+    const videoWrapper = isMobile
+        ? document.querySelector(".mobile-video-bg .video")
+        : document.querySelector(".zigzag-right .video");
+
+    if (!videoWrapper) return;
+
+    const video = videoWrapper.querySelector(".hero-video");
+    const btn = videoWrapper.querySelector(".video-control");
+    const playIcon = btn.querySelector(".play-icon");
+    const pauseIcon = btn.querySelector(".pause-icon");
+
+    // Autoplay on mobile (muted is already set on the element)
+    if (isMobile) {
+        video.play().then(() => {
+            videoWrapper.classList.add("playing");
+            // Keep both icons hidden while autoplaying — no button needed
+            playIcon.classList.add("hidden");
+            pauseIcon.classList.add("hidden");
+        }).catch(() => {
+            // Autoplay blocked — show play button as fallback
+            playIcon.classList.remove("hidden");
+        });
+    }
+
+    btn.addEventListener("click", () => {
+        if (video.paused) {
+            video.play();
+            videoWrapper.classList.add("playing");
+            playIcon.classList.add("hidden");
+            pauseIcon.classList.remove("hidden");
+        } else {
+            video.pause();
+            videoWrapper.classList.remove("playing");
+            playIcon.classList.remove("hidden");
+            pauseIcon.classList.add("hidden");
+        }
+    });
+});
+
+// banner slider
+
+
+(function () {
+
+    // Desktop: 2x2 grid slides — fade + autoplay
+    const desktopSwiper = new Swiper('.hero-swiper-desktop', {
+        loop: true,
+        slidesPerView: 1,
+        observer: true,           
+        observeParents: true,     
+        resizeObserver: true,    
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        speed: 700,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true,
+        },
+        pagination: {
+            el: '.hero-swiper-pagination',
+            clickable: true,
+        },
+        on: {
+            afterInit: function (swiper) {
+                // Force recalculate after layout settles
+                setTimeout(() => swiper.update(), 300);
+            },
+        },
+    });
+
+    // Mobile: full-bleed background slider
+    const mobileSwiper = new Swiper('.hero-swiper-mobile', {
+        loop: true,
+        observer: true,
+        observeParents: true,
+        resizeObserver: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        speed: 700,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true,
+        },
+        pagination: {
+            el: '.hero-swiper-mobile-pagination',
+            clickable: true,
+        },
+    });
+
+    // Sync both swipers to the same slide index (optional but nice UX)
+    desktopSwiper.on('slideChange', function () {
+        if (mobileSwiper && mobileSwiper.slideTo) {
+            mobileSwiper.slideTo(desktopSwiper.realIndex + 1);
+        }
+    });
+
+})();

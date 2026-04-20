@@ -1,11 +1,233 @@
+/* hero banner start */
+
+.zigzag-right .video {
+    @apply shadow-[0px_4px_10px_rgba(0,0,0,0.1)];
+}
+
+.video-control {
+    @apply transition duration-300;
+}
+
+.video-control svg {
+    @apply transition-transform duration-300;
+}
+
+.video-control:hover svg {
+    @apply scale-110;
+}
+
+.video-control {
+    @apply transition-opacity duration-300 opacity-100;
+}
+
+.video.playing .video-control {
+    @apply opacity-0 pointer-events-none;
+}
+
+.video.playing:hover .video-control {
+    @apply opacity-100 pointer-events-auto;
+}
+
+.hero-video-banner .container-fluid, .hero-image-banner .container-fluid {
+    @apply max-992:px-0;
+}
+
+@media (max-width: 992px) {
+    .zigzag-wrapper {
+        @apply relative;
+    }
+
+    .mobile-video-bg {
+        @apply absolute inset-0 w-full h-full;
+    }
+
+    .mobile-video-bg .video {
+        @apply w-full h-full;
+    }
+
+    .mobile-video-bg .hero-video {
+        @apply absolute inset-0 w-full h-full object-cover;
+    }
+
+    .video-overlay {
+        @apply absolute inset-0 bg-black/50 z-[1];
+    }
+
+    .zigzag-content-wraaper {
+        @apply relative z-[2];
+    }
+}
+
+
+/* hero image banner start */
+
+/* Mobile: slider as full background - mirrors .mobile-video-bg pattern */
+.mobile-slider-bg {
+    @apply absolute inset-0 w-full h-full z-0;
+}
+
+.mobile-slider-bg .hero-swiper-mobile,
+.mobile-slider-bg .swiper-wrapper,
+.mobile-slider-bg .swiper-slide {
+    @apply w-full h-full;
+}
+
+.mobile-slider-bg .swiper-slide {
+    @apply relative overflow-hidden;
+}
+
+.hero-slide-img {
+    @apply absolute inset-0 w-full h-full object-cover;
+}
+
+/* Desktop grid slider wrapper - clips slide transitions */
+.hero-grid-slider {
+    @apply overflow-hidden;
+}
+
+.hero-swiper-desktop {
+    @apply overflow-hidden w-full h-full;
+}
+
+.hero-image-banner .zigzag-content-wraaper .zigzag-right {
+    @apply 1199:ml-50 w-full max-w-700 max-1299:max-w-500 ml-auto!;
+}
+
+.hero-grid {
+    @apply flex flex-col w-auto gap-50 max-1365:gap-40 max-1199:gap-30 pr-150 max-1199:pr-100;
+}
+
+.hero-grid-main  {
+    @apply flex gap-50 max-1365:gap-40 gap-30;
+}
+
+.hero-grid-item {
+    @apply overflow-hidden rounded-[10px];
+}
+
+.hero-grid-item img {
+    @apply w-full h-full object-cover block transition-transform duration-500;
+}
+
+.hero-grid-item:hover img {
+    @apply scale-105;
+}
+
+.hero-image-banner .swiper-wrapper {
+    @apply 992:pt-25 992:pb-70 992:ml-70;
+}
+
+.hero-image-banner .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero-image-banner .swiper-slide {
+              display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100% !important; 
+    }
+
+
+.hero-grid-item--tl {
+    @apply max-w-300 h-[257px] max-1365:h-[200px] max-1365:max-w-200 max-1199:h-[180px] -ml-25 mt-25;
+}
+
+
+.hero-grid-item--tr {
+    @apply max-w-251 h-[301px] max-1365:h-[250px] max-1199:h-[220px] -mt-25;
+}
+
+.hero-grid-item--bl {
+    @apply max-w-249 h-[300px] max-1365:h-[230px] max-1199:h-[240px] -ml-70 -mb-70;
+}
+
+
+.hero-grid-item--br {
+    @apply max-w-299 h-[255px] max-1365:h-[220px] max-1199:h-[200px] max-1365:max-w-240;
+}
+
+.hero-swiper-pagination {
+    @apply relative flex gap-[6px] items-center mt-5;
+}
+
+.hero-mobile-pagination {
+    @apply relative z-10 px-30 pb-30;
+}
+
+.hero-swiper-mobile-pagination {
+    @apply relative flex gap-[6px] items-center;
+}
+
+.hero-image-banner .swiper-pagination {
+    @apply mt-50 relative;
+}
+
+.hero-swiper-pagination .swiper-pagination-bullet,
+.hero-swiper-mobile-pagination .swiper-pagination-bullet {
+    @apply w-[10px] h-[10px] rounded-full bg-white/40 opacity-100 transition-all duration-300 !m-0;
+}
+
+.hero-swiper-pagination .swiper-pagination-bullet-active,
+.hero-swiper-mobile-pagination .swiper-pagination-bullet-active {
+    @apply bg-white scale-110;
+}
+
+.hero-image-banner .swiper-slide  {
+    @apply bg-black/20 992:rounded-tl-[30px] 992:rounded-bl-[30px];
+}
+
+/* hero banner end */
+
+
 /* work together start */
 
+.work-together {
+    @apply relative overflow-hidden;
+}
+
 .work-together-inner {
-    @apply relative;
+    @apply relative flex items-center justify-center min-h-[540px] max-575:min-h-[494px];
+}
+
+.work-together-img {
+    @apply absolute inset-0 w-full h-full;
+}
+
+.work-together-img .img {
+    @apply w-full h-full;
+}
+
+.work-together-img img {
+    @apply w-full h-full object-cover;
 }
 
 .work-together-inner::before {
-    @apply absolute w-full h-full bg-black/80 left-0 top-0 content-[""];
+    content: "";
+    @apply absolute inset-0 bg-black/80 z-[1];
 }
 
+.work-together-content {
+    @apply relative z-[2] py-100 max-575:pb-70 w-full top-50 max-575:top-0;
+}
+
+.desktop-img {
+    @apply 575:block hidden;
+}
+.mobile-img {
+    @apply 575:hidden block;
+}
 /* work together end */
+
+.green-shape {
+    @apply relative;
+}
+
+.green-shape::before {
+    @apply content-[""] absolute left-0 top-0 w-full h-[126px] max-1600:h-[100px] max-992:h-[70px] max-769:h-[50px] max-575:h-[50px] max-[390px]:h-[40px] min-[2000px]:h-170 min-[500px]:bg-[url('../assets/images/green-shape.svg')] bg-[url('../assets/images/green-shape-mobile.svg')] bg-no-repeat bg-cover bg-center z-2;
+}
+
+.shape-line {
+    @apply h-1 w-full bg-primary-yellow max-992:hidden;
+}
