@@ -1,0 +1,11 @@
+/* work together start */
+
+.work-together-inner {
+    @apply relative;
+}
+
+.work-together-inner::before {
+    @apply absolute w-full h-full bg-black/80 left-0 top-0 content-[""];
+}
+
+/* work together end */

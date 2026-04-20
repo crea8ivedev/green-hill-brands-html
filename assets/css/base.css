@@ -1,0 +1,90 @@
+*,
+::before,
+::after {
+  @apply box-border;
+}
+html{
+  @apply h-screen
+}
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  @apply outline-dotted! outline-1!;
+}
+body {
+  @apply font-body font-normal text-body-3 leading-[100%] relative overflow-x-hidden antialiased scroll-smooth;
+}
+
+body.menu-open {
+  @apply overflow-hidden;
+}
+
+a {
+  @apply transition-all duration-300 ease-in-out cursor-pointer;
+}
+a,
+a:hover {
+@apply no-underline! transition-all duration-300;
+}
+p {
+  @apply font-body font-normal text-body-3 leading-[19px];
+}
+
+b {
+  @apply font-bold;
+}
+a,
+button,
+input,
+textarea,
+select {
+  @apply outline-0 no-underline shadow-none;
+}
+
+ul {
+  @apply p-0 mt-0;
+}
+
+ul li {
+  @apply list-none;
+}
+
+img {
+  @apply block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  @apply font-heading font-bold;
+}
+h1 , .h1 {
+  @apply text-heading-1 leading-71  max-1440:text-heading-tablet-1 max-1440:leading-55 max-1199:text-heading-mobile-1 max-1199:leading-40;
+}
+h2 , .h2 {
+  @apply text-heading-2 leading-60 max-1440:text-heading-tablet-2 max-1440:leading-50 max-1023:text-heading-mobile-1 max-1023:leading-40;
+}
+h3, .h3 {
+  @apply text-heading-3 leading-40 max-1440:text-heading-tablet-3 max-1440:leading-36 max-1023:text-heading-tablet-3 max-1023:leading-32 ;
+}
+h4, .h4 {
+  @apply text-heading-4 leading-29 max-1199:text-heading-tablet-5 max-1199:leading-26;
+}
+h5, .h5 {
+  @apply text-heading-5 leading-23;
+}
+h6, .h6 {
+  @apply text-heading-6 leading-29;
+}

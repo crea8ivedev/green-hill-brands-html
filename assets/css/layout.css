@@ -1,0 +1,343 @@
+/* =============================================
+   ANNOUNCEMENT BAR
+============================================= */
+.anouncement-bar-inner p {
+    @apply max-992:text-body-4 max-992:leading-17;
+}
+
+/* =============================================
+   HEADER BASE
+============================================= */
+.header .header-wrapper {
+    @apply flex justify-between items-center 992:gap-20 py-22 max-992:py-20;
+}
+
+.header .header-wrapper .main-navigation ul {
+    @apply flex items-center gap-40;
+}
+
+.header .header-wrapper .main-navigation ul li a {
+    @apply text-base leading-[19px] font-bold text-white py-34 hover:text-primary-yellow;
+}
+
+.header .header-wrapper .main-navigation ul > li {
+    @apply relative;
+}
+
+.header .header-wrapper .main-navigation .submenu-wrapper ul > li {
+    @apply w-full;
+}
+
+@media (min-width: 993px) {
+    .header .header-wrapper .accordion-toggle {
+        @apply hidden;
+    }
+
+    .header .header-wrapper .submenu-wrapper {
+        @apply absolute -left-10 min-w-auto py-12 bg-white invisible opacity-0 z-[999] overflow-hidden;
+        top: calc(100% + 0px);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        transform: translateY(8px);
+        transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+    }
+
+    .header .header-wrapper .main-navigation ul > li:hover .submenu-wrapper {
+        @apply opacity-100 visible;
+        transform: translateY(0);
+    }
+
+    .header .header-wrapper .submenu-wrapper ul {
+        @apply flex! flex-col! gap-0!;
+    }
+
+    .header .header-wrapper .submenu-wrapper ul li a {
+        @apply block whitespace-nowrap text-black-37 font-bold leading-[1.4]! py-12! px-22!;
+        transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+    .header .header-wrapper .submenu-wrapper ul li a:hover {
+        @apply text-primary-yellow;
+    }
+
+    .header .header-wrapper .submenu-inner {
+        @apply flex items-center gap-[6px];
+    }
+}
+
+.header .header-wrapper .hamburger-btn {
+    @apply hidden bg-transparent border-0 cursor-pointer p-1 leading-none;
+}
+
+@media (max-width: 992px) {
+    .header .header-wrapper .hamburger-btn {
+        @apply flex items-center justify-center -order-1;
+    }
+}
+
+.header .header-wrapper .search-icon {
+    @apply cursor-pointer leading-none transition-opacity duration-200;
+}
+
+.header .header-wrapper .search-icon:hover,
+.header .header-wrapper .search-icon.active {
+    @apply opacity-75;
+}
+
+.searchbar-main {
+    @apply relative cursor-pointer;
+}
+
+.search-box {
+    @apply absolute right-0 top-55 w-screen max-w-480 bg-white overflow-hidden z-[998] max-992:top-69 max-h-0;
+    transition: max-height 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-box.search-open {
+    @apply max-h-80;
+}
+
+.search-box-inner {
+    @apply px-20 py-12;
+}
+
+.search-box-input {
+    @apply pb-10 px-10 border-b border-black-37 flex items-center gap-10 mx-auto;
+}
+
+.search-input {
+    @apply flex-1 outline-none text-base leading-19 font-body font-normal leading-19 text-[#1a1a1a] bg-transparent caret-[#3a6b35];
+}
+
+.search-input::placeholder {
+    @apply text-black/20 italic text-base leading-19 font-body;
+}
+
+.searchbar-main.active .search-icone svg path {
+    @apply fill-primary-yellow;
+}
+
+/* Form Label Goes Here */
+
+/* Desktop nav — mobile પર hide */
+.desktop-menu {
+    @apply block;
+}
+
+/* Mobile nav wrapper — desktop પર hide, mobile પર show */
+.mobile-menu-wrapper {
+    @apply hidden overflow-hidden bg-white max-h-0;
+    transition: max-height 0.35s ease;
+}
+
+.mobile-menu-wrapper.mobile-open {
+    @apply absolute left-0 w-full max-h-1000 py-10;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 992px) {
+    .desktop-menu {
+        @apply hidden;
+    }
+    .mobile-menu-wrapper {
+        @apply block;
+    }
+}
+
+.mobile-menu-wrapper .main-navigation ul li {
+    @apply  px-30;
+}
+
+.main-navigation ul li a {
+    @apply text-base leading-19 py-14 font-bold text-black-37 inline-block;
+}
+
+.mobile-menu-wrapper .accordion-open .submenu-wrapper ul {
+    @apply block;
+}
+
+.mobile-menu-wrapper .submenu-wrapper ul {
+    @apply hidden;
+}
+
+.mobile-menu-wrapper .submenu-wrapper ul li {
+    @apply px-0;
+}
+
+.mobile-menu-wrapper .submenu-inner {
+    @apply flex justify-between;
+}
+
+.mobile-menu-wrapper ul li.accordion-open {
+    @apply px-0;
+}
+
+.mobile-menu-wrapper ul li .submenu-inner {
+    @apply px-30;
+}
+
+.mobile-menu-wrapper .main-navigation .submenu-wrapper ul li a {
+    @apply px-30 w-full bg-light-white;
+}
+
+.mobile-menu-wrapper .main-navigation .accordion-open .submenu-inner > a {
+    @apply text-green-73;
+}
+
+.mobile-menu-wrapper ul:not(.accordion-open) .submenu-inner {
+    @apply px-0;
+}
+
+.mobile-menu-wrapper ul li.accordion-open .submenu-inner {
+    @apply px-30;
+}
+
+.mobile-menu-wrapper .main-navigation ul li a:hover {
+    @apply text-green-73;
+}
+
+.mobile-menu-wrapper .main-navigation ul li a {
+    @apply w-full;
+}
+
+.mobile-menu-wrapper .accordion-toggle svg {
+    @apply transition-transform duration-300 ease-in-out;
+}
+
+.mobile-menu-wrapper .accordion-toggle svg path {
+    @apply transition-colors duration-300 ease-in-out;
+}
+
+.mobile-menu-wrapper .accordion-open .accordion-toggle svg {
+    @apply rotate-[180deg];
+}
+
+.mobile-menu-wrapper .accordion-open .accordion-toggle svg path {
+    @apply fill-green-73;
+}
+
+.icon-close path {
+    @apply fill-primary-yellow;
+}
+
+/* =============================================
+   FOOTER
+============================================= */
+.site-footer {
+    @apply bg-primary-green;
+}
+
+.site-footer__panel {
+    @apply text-white flex items-start justify-between gap-40 py-55;
+}
+
+.site-footer__newsletter {
+    @apply max-w-[492px] w-full;
+}
+
+.site-footer__title {
+    @apply font-heading text-white mb-20;
+}
+
+.site-footer__form {
+    @apply flex items-center gap-10;
+}
+
+.site-footer__input {
+    @apply w-full h-[43px] rounded-full border-2 border-white bg-white/25 px-20 text-body-3 leading-19 text-white outline-none;
+}
+
+.site-footer__input::placeholder {
+    @apply text-label italic;
+}
+
+.site-footer__input:focus {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.site-footer__button:hover {
+    @apply bg-white;
+}
+
+.site-footer__nav ul {
+    @apply grid grid-cols-2 gap-x-40 gap-y-20 max-575:grid-cols-3;
+}
+
+.site-footer__nav a {
+    @apply font-body text-body-3 leading-19 font-bold text-white transition-colors duration-300 ease-in-out;
+}
+
+.site-footer__nav a:hover {
+    @apply text-primary-yellow;
+}
+
+.site-footer__meta {
+    @apply flex flex-col items-end gap-20 text-right;
+}
+
+.site-footer__social {
+    @apply inline-flex items-center justify-center leading-none;
+}
+
+.site-footer__social svg rect {
+    @apply transition-colors duration-300 ease-in-out;
+}
+
+.site-footer__social svg:hover rect {
+    @apply fill-white;
+}
+
+.site-footer__copyright {
+    @apply font-body text-body-3 leading-19 font-bold text-white;
+}
+
+.site-footer__copyright a {
+    @apply transition-colors duration-300 ease-in-out;
+}
+
+.site-footer__copyright a:hover {
+    @apply text-primary-yellow;
+}
+
+
+.site-footer__credit {
+    @apply inline-flex items-center gap-8 font-body text-[11px] leading-[1] uppercase text-white/90;
+}
+
+.site-footer__credit:hover {
+    @apply text-white;
+}
+
+@media (max-width: 1025px) {
+    .site-footer__panel {
+        @apply max-767:flex-col flex-wrap items-start gap-55 py-44;
+    }
+
+    .site-footer__newsletter {
+        @apply max-w-[500px] max-767:max-w-full;
+    }
+
+    .site-footer__title {
+        @apply text-heading-4! leading-30!;
+    }
+
+    .site-footer__form {
+        @apply max-767:flex-col items-start gap-10;
+    }
+
+    .site-footer__button {
+        @apply min-w-[112px];
+    }
+
+    .site-footer__nav {
+        @apply w-full grid-cols-2 gap-x-28 gap-y-14 max-1025:max-w-500;
+    }
+
+    .site-footer__meta {
+        @apply items-start text-left;
+    }
+
+    .site-footer__nav ul li:nth-child(odd) {
+        @apply max-575:col-span-2;
+    }
+}

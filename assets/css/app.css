@@ -1,0 +1,63 @@
+@layer base, components, utilities;
+@import 'tailwindcss';
+@import './base.css';
+@import './components.css';
+@import './utlities.css';
+@import './layout.css';
+
+@theme {
+  --font-body: "Inter", sans-serif;
+  --font-heading: "Libre Baskerville", serif;
+
+  --breakpoint-2000: 2000px;
+  --breakpoint-1920: 1920px;
+  --breakpoint-1600: 1600px;
+  --breakpoint-1440: 1440px;
+  --breakpoint-1365: 1365px;
+  --breakpoint-1299: 1299px;
+  --breakpoint-1199: 1199.99px;
+  --breakpoint-1023: 1023.99px;
+  --breakpoint-1025: 1025px;
+  --breakpoint-992: 992px;
+  --breakpoint-767: 767px;
+  --breakpoint-639: 639px;
+  --breakpoint-575: 575px;
+  --breakpoint-479: 479px;
+  --breakpoint-431: 431px;
+  --breakpoint-374: 374px;
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-primary-yellow: #F2B525;
+  --color-primary-green: #285039;
+  --color-black-37: #373737;
+  --color-off-white: #FFF8E7;
+  --color-light-green: #466D2E;
+  --color-green-73: #73A027;
+  --color-light-white: #F4F4F4;
+  --color-label: #C7C7C7;
+
+  --text-body-1: 20px;
+  --text-body-2: 18px;
+  --text-body-3: 16px;
+  --text-body-4: 14px;
+
+  --text-heading-1: 57px;
+  --text-heading-2: 48px;
+  --text-heading-3: 32px;
+  --text-heading-4: 24px;
+  --text-heading-5: 20px;
+  --text-heading-6: 18px;
+
+  --text-heading-tablet-1: 46px;
+  --text-heading-tablet-2: 40px;
+  --text-heading-tablet-3: 28px;
+  --text-heading-tablet-4: 22px;
+  --text-heading-tablet-5: 20px;
+  --text-heading-tablet-6: 18px;
+
+  --text-heading-mobile-1: 32px;
+  --text-heading-mobile-2: 30px;
+
+  --spacing: 1px;
+}
