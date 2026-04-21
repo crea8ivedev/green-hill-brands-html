@@ -19,6 +19,18 @@
     @apply text-white
 }
 
+.title-green h1 , .title-green  h2 , .title-green  h3 , .title-green h4, .title-green h5 , .title-green h6 {
+    @apply text-primary-green;
+}
+
+.title-light-green h1 , .title-light-green  h2 , .title-light-green  h3 , .title-light-green h4, .title-light-green h5 , .title-light-green h6 {
+    @apply text-light-green;
+}
+
+.title-extra-light-green h1 , .title-extra-light-green  h2 , .title-extra-light-green  h3 , .title-extra-light-green h4, .title-extra-light-green h5 , .title-extra-light-green h6 {
+    @apply text-green-73;
+}
+
 .title-body h1 , .title-body h2 , .title-body h3 , .title-body h4 , .title-body h5 , .title-body h6 {
     @apply font-body
 }
@@ -61,6 +73,10 @@
 
 .content.bold p {
     @apply font-bold;
+}
+
+.content p + p {
+    @apply mt-30 max-1023:mt-25;
 }
 
 .general-padding{

@@ -161,7 +161,15 @@
 }
 
 .hero-image-banner .swiper-pagination {
-    @apply mt-50 relative;
+    @apply 992:mt-50 992:relative max-992:justify-center max-992:bottom-80! gap-10!;
+}
+
+.hero-image-banner .swiper-pagination-clickable .swiper-pagination-bullet {
+    @apply bg-transparent border-2 border-solid border-white/40 w-8 h-8;
+}
+
+.hero-image-banner .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    @apply bg-white w-12 h-12;
 }
 
 .hero-swiper-pagination .swiper-pagination-bullet,
@@ -220,14 +228,95 @@
 }
 /* work together end */
 
-.green-shape {
+
+/* who we are start */
+
+.who-we-are .pre-title h4 {
+    @apply min-w-160;
+}
+
+/* who we are end */
+
+
+
+/* what we do start */
+
+.what-we-do .pre-title h4 {
+    @apply min-w-160;
+}
+
+
+
+.faq-inner.active .faq-content  {
+    @apply py-25 border-t border-grey;
+}
+
+.faq-inner:last-child {
+    @apply border-b border-grey;
+}
+
+.faq-inner.active .faq-heading h4  {
+    @apply text-green-73;
+}
+
+.faq-inner.active .down-aerrow svg path {
+    @apply fill-green-73;
+}
+
+.faq-inner .down-aerrow svg {
+    @apply max-992:w-15;
+}
+/* what we do end */
+
+.card-img::before {
+    @apply content-[""] absolute top-0 left-0 w-full h-full bg-black/55;
+}
+
+.brand-logo {
+    @apply absolute top-1/2 left-1/2 -translate-1/2 z-2;
+}
+
+.ctm-slider-card .swiper-pagination-clickable .swiper-pagination-bullet {
+    @apply bg-transparent border-2 border-solid border-green-73/40 w-8 h-8 opacity-100;
+}
+
+.ctm-slider-card  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    @apply bg-green-73 w-12 h-12;
+}
+
+.ctm-slider-card  .swiper-pagination {
+    @apply relative bottom-0! mt-30 flex items-center justify-center gap-10;
+}
+
+.ctm-slider-card .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .ctm-slider-card .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    @apply m-0;
+}
+
+.ctm-slider-card .container-fluid {
+    @apply max-575:px-0!;
+}
+
+.ctm-slider-card .title-wrapper {
+    @apply max-575:px-30!;
+}
+
+
+.green-shape-top {
     @apply relative;
 }
 
-.green-shape::before {
+.green-shape-top::before {
     @apply content-[""] absolute left-0 top-0 w-full h-[126px] max-1600:h-[100px] max-992:h-[70px] max-769:h-[50px] max-575:h-[50px] max-[390px]:h-[40px] min-[2000px]:h-170 min-[500px]:bg-[url('../assets/images/green-shape.svg')] bg-[url('../assets/images/green-shape-mobile.svg')] bg-no-repeat bg-cover bg-center z-2;
 }
 
+.white-shape-bottom {
+    @apply relative;
+}
+
+.white-shape-bottom::before {
+    @apply content-[""] absolute left-0 bottom-0 -mb-1 w-full h-[126px] max-1600:h-[100px] max-992:h-[70px] max-769:h-[50px] max-575:h-[50px] max-[390px]:h-[40px] min-[2000px]:h-170 min-[500px]:bg-[url('../assets/images/white-shape.svg')] bg-[url('../assets/images/white-shape-mobile.svg')] bg-no-repeat bg-cover bg-center z-2;
+}
+
 .shape-line {
-    @apply h-1 w-full bg-primary-yellow max-992:hidden;
+    @apply h-1 w-full bg-primary-yellow;
 }

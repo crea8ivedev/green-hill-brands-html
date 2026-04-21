@@ -1,3 +1,18 @@
+// anoucement slider
+
+const announcementSwiper = new Swiper('.announcement-swiper', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 0,
+        speed: 800,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        allowTouchMove: false,
+    });
+
+
 // header 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -266,10 +281,10 @@ document.addEventListener("DOMContentLoaded", () => {
         observer: true,
         observeParents: true,
         resizeObserver: true,
-        autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
-        },
+        // autoplay: {
+        //     delay: 4000,
+        //     disableOnInteraction: false,
+        // },
         speed: 700,
         effect: 'fade',
         fadeEffect: {
@@ -289,3 +304,96 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 })();
+
+
+// what we do FAQ
+
+document.querySelectorAll('.faq-inner').forEach(function (item, index) {
+    var heading = item.querySelector('.faq-heading');
+    var content = item.querySelector('.faq-content');
+    var arrow = item.querySelector('.down-aerrow');
+
+    content.style.overflow = 'hidden';
+    content.style.transition = 'max-height 0.35s ease';
+    arrow.style.transition = 'transform 0.35s ease';
+    heading.style.cursor = 'pointer';
+
+    // Open first item by default
+    if (index === 0) {
+        item.classList.add('active');
+        content.style.maxHeight = content.scrollHeight + 'px';
+        arrow.style.transform = 'rotate(180deg)';
+    } else {
+        content.style.maxHeight = '0';
+        arrow.style.transform = 'rotate(0deg)';
+    }
+
+    heading.addEventListener('click', function () {
+        var isOpen = item.classList.contains('active');
+
+        // Close all
+        document.querySelectorAll('.faq-inner').forEach(function (el) {
+            el.classList.remove('active');
+            var c = el.querySelector('.faq-content');
+            var a = el.querySelector('.down-aerrow');
+            c.style.maxHeight = '0';
+            a.style.transform = 'rotate(0deg)';
+        });
+
+        // Open clicked if it was closed
+        if (!isOpen) {
+            item.classList.add('active');
+            content.style.maxHeight = 'none';
+            var fullHeight = content.scrollHeight;
+            content.style.maxHeight = '0';
+            content.offsetHeight;
+            content.style.maxHeight = fullHeight + 'px';
+            arrow.style.transform = 'rotate(180deg)';
+        }
+    });
+});
+
+
+// card slider
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const sliderEl = document.querySelector('.cards-slider');
+    if (!sliderEl) return;
+
+    const slideCount = sliderEl.querySelectorAll('.swiper-slide').length;
+    const enableOnDesktop = slideCount >= 5;
+
+    const cardsSwiper = new Swiper('.cards-slider', {
+        slidesPerView: 1.3,
+        spaceBetween: 28,
+        centeredSlides: true, // mobile only
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 2,
+                spaceBetween: 16,
+                centeredSlides: false,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                centeredSlides: false,
+            },
+            1280: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+                centeredSlides: false,
+            },
+            1365: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+                centeredSlides: false,
+                enabled: enableOnDesktop,
+            },
+        },
+    });
+});
