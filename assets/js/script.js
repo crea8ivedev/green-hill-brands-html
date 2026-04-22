@@ -34,16 +34,12 @@ document.addEventListener('DOMContentLoaded', function () {
     hamburger.setAttribute('aria-label', 'Toggle Menu');
     hamburger.setAttribute('aria-expanded', 'false');
     hamburger.innerHTML = `
-
 <svg class="icon-menu" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0 0H20V2.25H0V0ZM0 7.875H20V10.125H0V7.875ZM0 15.75H20V18H0V15.75Z" fill="white"/>
 </svg>
-
 <svg class="icon-close" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none;">
 <path d="M0 0H20V2.25H0V0ZM0 7.875H20V10.125H0V7.875ZM0 15.75H20V18H0V15.75Z" fill="white"/>
 </svg>
-
-
     `;
 
     // Insert hamburger before searchbar-main
@@ -64,43 +60,38 @@ document.addEventListener('DOMContentLoaded', function () {
     /* =============================================
        SUBMENU: MOBILE ACCORDION
     ============================================= */
-    const navItems = document.querySelectorAll('.mobile-nav ul > li');
+    const navItems = document.querySelectorAll('.mobile-nav ul > li.menu-item-has-children');
 
     navItems.forEach(function (li) {
-        const submenuWrapper = li.querySelector('.submenu-wrapper');
-        if (!submenuWrapper) return;
+        const submenu = li.querySelector('.submenu-wrapper');
+        if (!submenu) return;
 
-        // accordion toggle is in HTML — just query it
-        const accordionToggle = li.querySelector('.accordion-toggle');
-        if (!accordionToggle) return;
+        const parentLink = li.querySelector(':scope > a');
+        if (!parentLink) return;
 
-        // -- Mobile accordion click --
-accordionToggle.addEventListener('click', function (e) {
-    e.preventDefault();
-    e.stopPropagation();
+        // Initialise closed
+        submenu.style.maxHeight = '0px';
+        submenu.style.overflow = 'hidden';
 
-    const isOpen = li.classList.toggle('accordion-open');
-    accordionToggle.setAttribute('aria-expanded', isOpen);
+        parentLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
 
-    if (isOpen) {
-        submenuWrapper.style.maxHeight = submenuWrapper.scrollHeight + 'px';
-    } else {
-        submenuWrapper.style.maxHeight = '0px';
-    }
+            const isOpen = li.classList.toggle('accordion-open');
+            parentLink.setAttribute('aria-expanded', isOpen);
+            submenu.style.maxHeight = isOpen ? submenu.scrollHeight + 'px' : '0px';
 
-    // Close others
-    navItems.forEach(function (otherLi) {
-        if (otherLi !== li) {
-            otherLi.classList.remove('accordion-open');
-
-            const otherSubmenu = otherLi.querySelector('.submenu-wrapper');
-            const otherToggle = otherLi.querySelector('.accordion-toggle');
-
-            if (otherSubmenu) otherSubmenu.style.maxHeight = '0px';
-            if (otherToggle) otherToggle.setAttribute('aria-expanded', 'false');
-        }
-    });
-});
+            // Close other open items
+            navItems.forEach(function (otherLi) {
+                if (otherLi !== li) {
+                    otherLi.classList.remove('accordion-open');
+                    const otherLink = otherLi.querySelector(':scope > a');
+                    const otherSubmenu = otherLi.querySelector('.submenu-wrapper');
+                    if (otherLink) otherLink.setAttribute('aria-expanded', 'false');
+                    if (otherSubmenu) otherSubmenu.style.maxHeight = '0px';
+                }
+            });
+        });
     });
 
     /* =============================================
@@ -116,9 +107,9 @@ accordionToggle.addEventListener('click', function (e) {
             // Reset all accordion states
             navItems.forEach(function (li) {
                 li.classList.remove('accordion-open');
-                const toggle = li.querySelector('.accordion-toggle');
+                const link = li.querySelector(':scope > a');
                 const submenu = li.querySelector('.submenu-wrapper');
-                if (toggle) toggle.setAttribute('aria-expanded', 'false');
+                if (link) link.setAttribute('aria-expanded', 'false');
                 if (submenu) submenu.style.maxHeight = '';
             });
         }
@@ -130,7 +121,6 @@ accordionToggle.addEventListener('click', function (e) {
     const searchIconWrapper = document.querySelector('.searchbar-main');
     const searchBox = document.querySelector('.search-box');
 
-    // Prevent clicks inside search-box from bubbling up to searchbar-main toggle
     searchBox.addEventListener('click', function (e) {
         e.stopPropagation();
     });
@@ -140,7 +130,6 @@ accordionToggle.addEventListener('click', function (e) {
         searchIconWrapper.classList.add('active');
         setTimeout(() => searchBox.querySelector('.search-input').focus(), 100);
 
-        // Close mobile menu if open
         menuWrapper.classList.remove('mobile-open');
         hamburger.setAttribute('aria-expanded', 'false');
         hamburger.querySelector('.icon-menu').style.display = 'block';
@@ -160,12 +149,10 @@ accordionToggle.addEventListener('click', function (e) {
         }
     });
 
-    // Close on Escape key
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') closeSearch();
     });
 
-    // Close when clicking outside search box
     document.addEventListener('click', function (e) {
         if (
             searchBox.classList.contains('search-open') &&
@@ -178,13 +165,12 @@ accordionToggle.addEventListener('click', function (e) {
 
 });
 
-/* =============================================
-   STICKY HEADER ON SCROLL
-============================================= */
+
+//    STICKY HEADER ON SCROLL
+
 const stickyHeader = document.querySelector('.header');
 const headerHeight = stickyHeader.offsetHeight;
 
-// Add transition style for smooth effect
 stickyHeader.style.transition = 'background 0.3s ease, box-shadow 0.3s ease, top 0.3s ease';
 
 window.addEventListener('scroll', function () {
@@ -214,15 +200,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const playIcon = btn.querySelector(".play-icon");
     const pauseIcon = btn.querySelector(".pause-icon");
 
-    // Autoplay on mobile (muted is already set on the element)
     if (isMobile) {
         video.play().then(() => {
             videoWrapper.classList.add("playing");
-            // Keep both icons hidden while autoplaying — no button needed
             playIcon.classList.add("hidden");
             pauseIcon.classList.add("hidden");
         }).catch(() => {
-            // Autoplay blocked — show play button as fallback
             playIcon.classList.remove("hidden");
         });
     }
@@ -247,37 +230,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 (function () {
 
-    // Desktop: 2x2 grid slides — fade + autoplay
     const desktopSwiper = new Swiper('.hero-swiper-desktop', {
         loop: true,
         slidesPerView: 1,
-        observer: true,           
-        observeParents: true,     
-        resizeObserver: true,    
-        autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
-        },
-        speed: 700,
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true,
-        },
-        pagination: {
-            el: '.hero-swiper-pagination',
-            clickable: true,
-        },
-        on: {
-            afterInit: function (swiper) {
-                // Force recalculate after layout settles
-                setTimeout(() => swiper.update(), 300);
-            },
-        },
-    });
-
-    // Mobile: full-bleed background slider
-    const mobileSwiper = new Swiper('.hero-swiper-mobile', {
-        loop: true,
         observer: true,
         observeParents: true,
         resizeObserver: true,
@@ -291,12 +246,36 @@ document.addEventListener("DOMContentLoaded", () => {
             crossFade: true,
         },
         pagination: {
+            el: '.hero-swiper-pagination',
+            clickable: true,
+        },
+        on: {
+            afterInit: function (swiper) {
+                setTimeout(() => swiper.update(), 300);
+            },
+        },
+    });
+
+    const mobileSwiper = new Swiper('.hero-swiper-mobile', {
+        loop: true,
+        observer: true,
+        observeParents: true,
+        resizeObserver: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        speed: 700,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true,
+        },
+        pagination: {
             el: '.hero-swiper-mobile-pagination',
             clickable: true,
         },
     });
 
-    // Sync both swipers to the same slide index (optional but nice UX)
     desktopSwiper.on('slideChange', function () {
         if (mobileSwiper && mobileSwiper.slideTo) {
             mobileSwiper.slideTo(desktopSwiper.realIndex + 1);
@@ -318,7 +297,6 @@ document.querySelectorAll('.faq-inner').forEach(function (item, index) {
     arrow.style.transition = 'transform 0.35s ease';
     heading.style.cursor = 'pointer';
 
-    // Open first item by default
     if (index === 0) {
         item.classList.add('active');
         content.style.maxHeight = content.scrollHeight + 'px';
@@ -340,7 +318,6 @@ document.querySelectorAll('.faq-inner').forEach(function (item, index) {
             a.style.transform = 'rotate(0deg)';
         });
 
-        // Open clicked if it was closed
         if (!isOpen) {
             item.classList.add('active');
             content.style.maxHeight = 'none';
@@ -356,7 +333,6 @@ document.querySelectorAll('.faq-inner').forEach(function (item, index) {
 
 // card slider
 
-
 document.addEventListener('DOMContentLoaded', function () {
     const sliderEl = document.querySelector('.cards-slider');
     if (!sliderEl) return;
@@ -367,7 +343,49 @@ document.addEventListener('DOMContentLoaded', function () {
     const cardsSwiper = new Swiper('.cards-slider', {
         slidesPerView: 1.3,
         spaceBetween: 28,
-        centeredSlides: true, // mobile only
+        centeredSlides: true, 
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 2,
+                spaceBetween: 16,
+                centeredSlides: false,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                centeredSlides: false,
+            },
+            1280: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+                centeredSlides: false,
+            },
+            1365: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+                centeredSlides: false,
+                enabled: enableOnDesktop,
+            },
+        },
+    });
+});
+
+// partner slider
+document.addEventListener('DOMContentLoaded', function () {
+    const sliderEl = document.querySelector('.partner-slider');
+    if (!sliderEl) return;
+
+    const slideCount = sliderEl.querySelectorAll('.swiper-slide').length;
+    const enableOnDesktop = slideCount >= 5;
+
+    const cardsSwiper = new Swiper('.partner-slider', {
+        slidesPerView: 1.3,
+        spaceBetween: 28,
+        centeredSlides: true, 
         pagination: {
             el: '.swiper-pagination',
             clickable: true,

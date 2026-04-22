@@ -86,3 +86,7 @@
 .general-padding + .general-padding {
   @apply pt-0;
 }
+
+.img-fluid {
+    @apply w-full h-full object-cover shadow-[0px_4px_10px_rgba(0,0,0,0.1)] rounded-[10px];
+}

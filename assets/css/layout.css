@@ -47,8 +47,16 @@
     @apply flex items-center gap-40;
 }
 
+.header .header-wrapper .main-navigation .sub-menu.submenu-wrapper {
+    @apply flex-col;
+}
+
 .header .header-wrapper .main-navigation ul li a {
     @apply text-base leading-[19px] font-bold text-white py-34 hover:text-primary-yellow;
+}
+
+.header .header-wrapper .main-navigation .sub-menu.submenu-wrapper li a {
+    @apply text-base leading-[19px] font-bold text-black-37 py-34 hover:text-primary-yellow;
 }
 
 .header.header-sticky .header-wrapper .main-navigation ul li a {
@@ -68,7 +76,7 @@
         @apply hidden;
     }
 
-    .header .header-wrapper .submenu-wrapper {
+    .header .header-wrapper .sub-menu.submenu-wrapper {
         @apply absolute -left-10 min-w-auto py-12 bg-white invisible opacity-0 z-[999] overflow-hidden;
         top: calc(100% + 0px);
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -81,16 +89,16 @@
         transform: translateY(0);
     }
 
-    .header .header-wrapper .submenu-wrapper ul {
+    .header .header-wrapper .submenu-wrapper {
         @apply flex! flex-col! gap-0!;
     }
 
-    .header .header-wrapper .submenu-wrapper ul li a {
+    .header .header-wrapper .submenu-wrapper li a {
         @apply block whitespace-nowrap text-black-37 font-bold leading-[1.4]! py-12! px-22!;
         transition: background-color 0.15s ease, color 0.15s ease;
     }
 
-    .header .header-wrapper .submenu-wrapper ul li a:hover {
+    .header .header-wrapper .submenu-wrapper li a:hover {
         @apply text-primary-yellow;
     }
 
@@ -237,7 +245,7 @@
     @apply px-30;
 }
 
-.mobile-menu-wrapper .main-navigation .submenu-wrapper ul li a {
+.mobile-menu-wrapper .main-navigation .accordion-open ul {
     @apply px-30 w-full bg-light-white;
 }
 
@@ -245,12 +253,12 @@
     @apply text-green-73;
 }
 
-.mobile-menu-wrapper ul:not(.accordion-open) .submenu-inner {
-    @apply px-0;
+.mobile-menu-wrapper ul li.accordion-open > a {
+    @apply px-30;
 }
 
-.mobile-menu-wrapper ul li.accordion-open .submenu-inner {
-    @apply px-30;
+.mobile-menu-wrapper ul li.accordion-open ul li {
+    @apply px-0;
 }
 
 .mobile-menu-wrapper .main-navigation ul li a:hover {
@@ -259,6 +267,28 @@
 
 .mobile-menu-wrapper .main-navigation ul li a {
     @apply w-full;
+}
+
+.mobile-menu-wrapper .main-navigation ul li:has(.sub-menu) > a {
+    @apply relative;
+}
+
+.mobile-menu-wrapper .main-navigation ul li:has(.sub-menu) > a::before {
+    @apply content-[""] absolute right-0 top-1/2 -translate-y-1/2 bg-no-repeat bg-contain w-15 h-9;
+    background-image: url('@images/aerrow.svg');
+}
+
+.mobile-menu-wrapper .main-navigation .accordion-open > a::before {
+     @apply !right-30 rotate-[180deg] transition-all duration-300 ease-in-out;
+}
+
+.mobile-menu-wrapper .main-navigation ul li > a::before {
+    @apply transition-transform duration-300 ease-in-out;
+}
+   
+
+.mobile-menu-wrapper .main-navigation .sub-menu li a::before {
+    @apply hidden;
 }
 
 .mobile-menu-wrapper .accordion-toggle svg {

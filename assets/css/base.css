@@ -22,6 +22,17 @@ body.menu-open {
   @apply overflow-hidden;
 }
 
+/* globa-list */
+.global-list ul{
+    @apply list-none flex flex-col gap-10 text-left;
+}
+.global-list ul li {
+    @apply text-body-3 block wrap-break-word leading-19  text-left font-body font-normal relative pl-15;
+}
+.global-list ul li::before{
+    @apply content-[''] absolute top-1/2 -translate-y-1/2 left-0 h-8 w-8 bg-green-73 rounded-full;
+}
+
 a {
   @apply transition-all duration-300 ease-in-out cursor-pointer;
 }
@@ -80,7 +91,7 @@ h3, .h3 {
   @apply text-heading-3 leading-40 max-1440:text-heading-tablet-3 max-1440:leading-36 max-1025:text-heading-tablet-3 max-1025:leading-32 ;
 }
 h4, .h4 {
-  @apply text-heading-4 leading-29 max-1199:text-heading-tablet-5 max-1199:leading-26;
+  @apply text-heading-4 leading-30 max-1199:text-heading-tablet-5 max-1199:leading-26;
 }
 h5, .h5 {
   @apply text-heading-5 leading-23;
