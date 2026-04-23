@@ -387,9 +387,9 @@
     @apply h-full block;
 }
 
-.ctm-partner {
+/* .ctm-partner {
     @apply pt-100 pb-100 max-992:pt-70 max-992:pb-70;
-}
+} */
 
 .partner-slider .swiper-slide.card {
   @apply h-auto;
@@ -415,9 +415,9 @@
     @apply py-100 max-992:py-70;
 }
 
-.ctm-who-we-are, .ctm-private-lable {
+/* .ctm-who-we-are, .ctm-private-lable {
     @apply pt-50 pb-100 max-992:pb-70;
-}
+} */
 
 .section-padding-top .zigzag-section-inner {
     @apply pt-50 max-992:pt-44;
@@ -427,9 +427,9 @@
     @apply py-100 max-992:py-70;
 }
 
-.ctm-private-lable .zigzag-section-inner, .ctm-who-we-are .zigzag-section-inner, .ctm-mf-oparations .zigzag-section-inner {
+/* .ctm-private-lable .zigzag-section-inner, .ctm-who-we-are .zigzag-section-inner, .ctm-mf-oparations .zigzag-section-inner {
     @apply pt-100 max-992:pt-44;
-}
+} */
 
 .ctm-private-lable-slider {
     @apply bg-off-white py-100 max-992:py-70;
@@ -535,16 +535,36 @@
     @apply py-55 max-992:py-44;
 }
 
-.ctm-spply-chain {
+.green-shape-top {
+    @apply relative;
+}
+
+.ctm-py-100 {
     @apply py-100 max-992:py-70;
 }
 
-.ctm-spply-chain .container-fluid {
-    @apply pt-100 max-992:pt-70;
+.ctm-pt-50 {
+    @apply pt-50 max-992:pt-44;
 }
 
-.green-shape-top {
-    @apply relative;
+.ctm-pb-100 {
+    @apply pb-100 max-992:pb-70;
+}
+
+.ctm-pb-200 {
+    @apply pb-100 max-992:pb-70;
+}
+
+.ctm-py-200 {
+    @apply py-200 max-992:py-100;
+}
+
+.ctm-pt-200 {
+    @apply pt-200 max-992:pt-100;
+}
+
+.ctm-pb-200 {
+    @apply pb-200 max-992:pb-100;
 }
 
 .green-shape-top::before {
@@ -589,6 +609,10 @@
 
 .off-white-shape-bottom::after {
     @apply content-[""] absolute left-0 bottom-1 -mb-1 w-full h-[126px] max-1600:h-[100px] max-992:h-[70px] max-769:h-[50px] max-575:h-[50px] max-[390px]:h-[40px] min-[2000px]:h-170 min-[500px]:bg-[url('../assets/images/off-white-shape-bottom.svg')] bg-[url('../assets/images/off-white-shape-bottom-mobile.svg')] max-[500px]:rotate-[180deg] bg-no-repeat bg-cover bg-center z-2;
+}
+
+.site-footer__form .wpcf7-spinner {
+    @apply hidden!;
 }
 
 
