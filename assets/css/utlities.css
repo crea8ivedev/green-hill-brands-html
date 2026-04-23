@@ -49,6 +49,10 @@
     @apply max-992:px-0;
 }
 
+.hero-video-banner {
+    @apply 992:pt-281! 992:pb-200!;
+}
+
 @media (max-width: 992px) {
     .zigzag-wrapper {
         @apply relative;
@@ -71,10 +75,13 @@
     }
 
     .zigzag-content-wraaper {
-        @apply relative z-[2] min-h-772;
+        @apply relative z-[2];
     }
 }
 
+.hero-image-banner .zigzag-content-wraaper {
+    @apply min-h-772;
+}
 
 /* hero image banner start */
 
@@ -344,6 +351,10 @@
     @apply max-575:min-w-260;
 }
 
+.hero-inner-banner {
+    @apply 992:pt-220! 992:pb-200! max-992:pt-204! max-992:pb-100!;
+}
+
 .ctm-manufacturing .global-list ul li {
     @apply text-white;
 }
@@ -397,7 +408,7 @@
 }
 
 .ctm-client-relationships {
-    @apply pt-50 pb-100 max-992:pb-70;
+    @apply py-100 max-992:py-70;
 }
 
 .ctm-approach {
@@ -406,6 +417,18 @@
 
 .ctm-who-we-are, .ctm-private-lable {
     @apply pt-50 pb-100 max-992:pb-70;
+}
+
+.section-padding-top .zigzag-section-inner {
+    @apply pt-50 max-992:pt-44;
+}
+
+.section-padding-block .zigzag-section-inner {
+    @apply py-100 max-992:py-70;
+}
+
+.ctm-private-lable .zigzag-section-inner, .ctm-who-we-are .zigzag-section-inner, .ctm-mf-oparations .zigzag-section-inner {
+    @apply pt-100 max-992:pt-44;
 }
 
 .ctm-private-lable-slider {
@@ -469,7 +492,7 @@
 }
 
 .green-shape-top.green-shape-bottom {
-    @apply -mb-124 max-1600:-mb-100 max-992:-mb-70 max-769:-mb-[50px] max-575:-mb-[50px] max-[390px]:-mb-[40px] min-[2000px]:-mb-169 py-124 max-1600:py-100 max-992:py-70 max-769:py-[50px] max-575:py-[50px] max-[390px]:py-[40px] min-[2000px]:py-169;
+    @apply py-124 max-1600:py-100 max-992:py-70 max-769:py-[50px] max-575:py-[50px] max-[390px]:py-[40px] min-[2000px]:py-169;
 }
 
 .light-green-shape-top.white-shape-bottom {
@@ -488,8 +511,16 @@
     @apply bg-light-green mb-0;
 }
 
-.white-shape-bottom {
+/* .white-shape-bottom {
     @apply -mb-124 max-1600:-mb-100 max-992:-mb-70 max-769:-mb-[50px] max-575:-mb-[50px] max-[390px]:-mb-[40px] min-[2000px]:-mb-169 py-124 max-1600:py-100 max-992:py-70 max-769:py-[50px] max-575:py-[50px] max-[390px]:py-[40px] min-[2000px]:py-169;
+} */
+
+.top-minus {
+    @apply -mt-124 max-1600:-mt-100 max-992:-mt-70 max-769:-mt-[50px] max-575:-mt-[50px] max-[390px]:-mt-[40px] min-[2000px]:-mt-169;
+}
+
+.bottom-minus {
+    @apply -mb-124 max-1600:-mb-100 max-992:-mb-70 max-769:-mb-[50px] max-575:-mb-[50px] max-[390px]:-mb-[40px] min-[2000px]:-mb-169;
 }
 
 .video-zizag .zigzag-section-inner, .ctm-company-feature .zigzag-section-inner {
@@ -502,6 +533,14 @@
 
 .ctm-future-brands .zigzag-section-inner {
     @apply py-55 max-992:py-44;
+}
+
+.ctm-spply-chain {
+    @apply py-100 max-992:py-70;
+}
+
+.ctm-spply-chain .container-fluid {
+    @apply pt-100 max-992:pt-70;
 }
 
 .green-shape-top {
