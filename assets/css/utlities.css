@@ -344,12 +344,20 @@
     @apply max-575:min-w-260;
 }
 
-.zigzag-section .global-list ul li {
+.ctm-manufacturing .global-list ul li {
     @apply text-white;
 }
 
-.zigzag-section .ctm-list h6 {
-    @apply font-body text-white font-bold text-base leading-19;
+.ctm-manufacturing .ctm-list h6 {
+    @apply text-white;
+}
+
+.ctm-list h6 {
+    @apply font-body font-bold text-base leading-19;
+}
+
+.ctm-list h6 {
+    @apply text-primary-green;
 }
 
 .image-right .zigzag-wrapper {
@@ -369,7 +377,7 @@
 }
 
 .ctm-partner {
-    @apply pt-50 pb-100 max-992:pt-70 max-992:pb-70;
+    @apply pt-100 pb-100 max-992:pt-70 max-992:pb-70;
 }
 
 .partner-slider .swiper-slide.card {
@@ -404,8 +412,16 @@
     @apply bg-off-white py-100 max-992:py-70;
 }
 
+.ctm-co-manufacturing {
+    @apply bg-off-white py-100 max-992:py-70;
+}
+
 .ctm-private-lable-slider .partner-slider {
-    @apply pb-55;
+    @apply pb-55 max-992:pb-44;
+}
+
+.ctm-mf-oparations {
+    @apply pt-50 pb-100 max-992:pb-70;
 }
 
 .ctm-private-lable-slider .card-details {
@@ -428,6 +444,30 @@
     @apply min-[1025px]:py-33 min-[1025px]:px-30;
 }
 
+.ctm-what-to-expert-slider .card-details h4 {
+    @apply text-xl! leading-25! max-575:text-lg! max-575:leading-22!;
+}
+
+.ctm-what-to-expert-slider {
+    @apply py-100 max-992:py-70;
+}
+
+.ctm-why-partner .title-wrapper {
+    @apply max-w-1000;
+}
+
+.ctm-why-partner .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    @apply bg-white border-white;
+}
+
+.ctm-why-partner .swiper-pagination-clickable .swiper-pagination-bullet {
+    @apply border-white/40;
+}
+
+.ctm-future-brands.white-shape-bottom::after {
+    @apply rotate-[180deg] mb-0;
+}
+
 .green-shape-top.green-shape-bottom {
     @apply -mb-124 max-1600:-mb-100 max-992:-mb-70 max-769:-mb-[50px] max-575:-mb-[50px] max-[390px]:-mb-[40px] min-[2000px]:-mb-169 py-124 max-1600:py-100 max-992:py-70 max-769:py-[50px] max-575:py-[50px] max-[390px]:py-[40px] min-[2000px]:py-169;
 }
@@ -446,6 +486,22 @@
 
 .light-green-shape-top.white-shape-bottom::after {
     @apply bg-light-green mb-0;
+}
+
+.white-shape-bottom {
+    @apply -mb-124 max-1600:-mb-100 max-992:-mb-70 max-769:-mb-[50px] max-575:-mb-[50px] max-[390px]:-mb-[40px] min-[2000px]:-mb-169 py-124 max-1600:py-100 max-992:py-70 max-769:py-[50px] max-575:py-[50px] max-[390px]:py-[40px] min-[2000px]:py-169;
+}
+
+.video-zizag .zigzag-section-inner, .ctm-company-feature .zigzag-section-inner {
+    @apply py-55 bg-primary-green;
+}
+
+.ctm-manufacturing .zigzag-section-inner, .ctm-perspective .zigzag-section-inner, .ctm-why-partner .zigzag-section-inner {
+    @apply bg-light-green pt-55 pb-100 max-575:pb-55;
+}
+
+.ctm-future-brands .zigzag-section-inner {
+    @apply py-55 max-992:py-44;
 }
 
 .green-shape-top {
@@ -493,7 +549,7 @@
 }
 
 .off-white-shape-bottom::after {
-    @apply content-[""] absolute left-0 bottom-1 -mb-1 w-full h-[126px] max-1600:h-[100px] max-992:h-[70px] max-769:h-[50px] max-575:h-[50px] max-[390px]:h-[40px] min-[2000px]:h-170 min-[500px]:bg-[url('../assets/images/off-white-shape-bottom.svg')] bg-[url('../assets/images/light-green-shape-top-mobile.svg')] max-[500px]:rotate-[180deg] bg-no-repeat bg-cover bg-center z-2;
+    @apply content-[""] absolute left-0 bottom-1 -mb-1 w-full h-[126px] max-1600:h-[100px] max-992:h-[70px] max-769:h-[50px] max-575:h-[50px] max-[390px]:h-[40px] min-[2000px]:h-170 min-[500px]:bg-[url('../assets/images/off-white-shape-bottom.svg')] bg-[url('../assets/images/off-white-shape-bottom-mobile.svg')] max-[500px]:rotate-[180deg] bg-no-repeat bg-cover bg-center z-2;
 }
 
 
