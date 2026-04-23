@@ -1,5 +1,5 @@
 .container-fluid {
-    @apply px-100 max-1440:px-80 max-1199:px-60 max-992:px-30 min-[2000px]:max-w-1880 mx-auto;
+    @apply px-100 max-1440:px-80 max-1199:px-40 max-992:px-30 min-[2000px]:max-w-1880 mx-auto;
 }
 
 .container-55 {
@@ -76,7 +76,7 @@
 }
 
 .content p + p {
-    @apply mt-30 max-1023:mt-25;
+    @apply mt-20 max-1023:mt-18;
 }
 
 .general-padding{
