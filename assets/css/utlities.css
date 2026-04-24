@@ -1,7 +1,7 @@
 /* hero banner start */
 
 .zigzag-right .video {
-    @apply shadow-[0px_4px_10px_rgba(0,0,0,0.1)];
+    @apply 992:shadow-[0px_4px_10px_rgba(0,0,0,0.1)];
 }
 
 .video-control {
@@ -12,10 +12,6 @@
     @apply transition-transform duration-300;
 }
 
-.video-control:hover svg {
-    @apply scale-110;
-}
-
 .video-control {
     @apply transition-opacity duration-300 opacity-100;
 }
@@ -24,14 +20,11 @@
     @apply max-992:hidden;
 }
 
-
-/* Wrapper: lock aspect ratio and contain the video */
 .zigzag-right .video,
 .mobile-video-bg .video {
     @apply relative overflow-hidden w-full aspect-[16_/_13.7];
 }
 
-/* Video: fill the wrapper absolutely at all times */
 .zigzag-right .video video,
 .mobile-video-bg .video video {
     @apply absolute top-0 left-0 w-full h-full object-cover;
@@ -70,22 +63,21 @@
         @apply absolute inset-0 w-full h-full object-cover;
     }
 
-    .video-overlay {
-        @apply absolute inset-0 bg-black/50 z-[1];
+    .mobile-video-bg .video-overlay {
+        @apply absolute inset-0 bg-[radial-gradient(50%_50%_at_50%_50%,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0)_100%),linear-gradient(0deg,rgba(0,0,0,0.55),rgba(0,0,0,0.55))] z-[9];
     }
 
     .zigzag-content-wraaper {
-        @apply relative z-[2];
+        @apply relative z-[9];
     }
 }
 
 .hero-image-banner .zigzag-content-wraaper {
-    @apply min-h-772;
+    @apply min-h-680 max-992:pt-150!;
 }
 
 /* hero image banner start */
 
-/* Mobile: slider as full background - mirrors .mobile-video-bg pattern */
 .mobile-slider-bg {
     @apply absolute inset-0 w-full h-full z-0;
 }
@@ -109,10 +101,8 @@
 }
 
 .mobile-slider-bg .swiper-slide::before {
-    @apply content-[""] top-0 left-0 bg-black/55 w-full h-full absolute z-9;
+    @apply content-[""] top-0 left-0 absolute inset-0 bg-[radial-gradient(50%_50%_at_50%_50%,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0)_100%),linear-gradient(0deg,rgba(0,0,0,0.55),rgba(0,0,0,0.55))] z-[9];
 }
-
-/* Desktop grid slider wrapper - clips slide transitions */
 
 .hero-swiper-desktop {
     @apply overflow-hidden w-full h-full;
@@ -209,11 +199,19 @@
     @apply w-full;
 }
 
+.hero-inner-banner .zigzag-left .img {
+    @apply relative overflow-hidden;
+}
+
+.hero-inner-banner .zigzag-left:has(.brand-logo) .img::before {
+    @apply content-[""] absolute left-0 top-0 w-full h-full bg-black/55 rounded-[10px];
+}
+
+.hero-inner-banner  .zigzag-left .brand-logo  {
+    @apply absolute top-1/2 left-1/2 -translate-1/2;
+}
+
 /* hero banner end */
-
-/* inner banner start */
-
-/* inner banner end */
 
 /* work together start */
 
@@ -289,7 +287,7 @@
 /* card slider start */
 
 .card-img::before {
-    @apply content-[""] absolute top-0 left-0 w-full h-full bg-black/55;
+    @apply content-[""] absolute top-0 left-0 w-full h-full bg-black/55 z-2;
 }
 
 .brand-logo {
@@ -308,8 +306,16 @@
     @apply relative bottom-0! flex items-center justify-center gap-10;
 }
 
-.ctm-slider-card  .swiper-pagination:has(.swiper-pagination-bullet[aria-label="Go to slide 2"]) {
+/* .ctm-slider-card  .swiper-pagination.swiper-pagination-lock {
     @apply mt-30;
+} */
+
+.ctm-slider-card .swiper-wrapper {
+    @apply mb-30;
+}
+
+.ctm-slider-card .swiper:has(.swiper-pagination-lock) .swiper-wrapper {
+    @apply mb-0;
 }
 
 .ctm-slider-card .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .ctm-slider-card .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
@@ -323,7 +329,6 @@
 .ctm-slider-card .title-wrapper {
     @apply max-575:px-30!;
 }
-
 
 .ctm-slider-card .swiper-slide.card {
   @apply h-auto;
@@ -341,6 +346,21 @@
   @apply flex-1;
 }
 
+.card-img > img, .card-imgs img {
+    @apply transition-transform duration-300 ease-in-out;
+}
+
+.card-link-aerrow {
+    @apply transition-transform duration-300 ease-in-out;
+}
+
+.card-inner:hover .card-img > img, .card-inner:hover .card-imgs img {
+    @apply scale-105;
+}
+
+.card-inner:hover .card-link-aerrow {
+    @apply translate-x-5;
+}
 /* card slider end */
 
 .pre-title h4 {
@@ -387,10 +407,6 @@
     @apply h-full block;
 }
 
-/* .ctm-partner {
-    @apply pt-100 pb-100 max-992:pt-70 max-992:pb-70;
-} */
-
 .partner-slider .swiper-slide.card {
   @apply h-auto;
 }
@@ -407,44 +423,29 @@
   @apply flex-1;
 }
 
-.ctm-client-relationships {
-    @apply py-100 max-992:py-70;
+.opportunities-slider .swiper-slide.card {
+  @apply h-auto;
 }
-
-.ctm-approach {
-    @apply py-100 max-992:py-70;
+.opportunities-slider .card-inner {
+  @apply h-full flex flex-col;
 }
-
-/* .ctm-who-we-are, .ctm-private-lable {
-    @apply pt-50 pb-100 max-992:pb-70;
-} */
-
-.section-padding-top .zigzag-section-inner {
-    @apply pt-50 max-992:pt-44;
+.opportunities-slider .card-imgs {
+  @apply shrink-0;
 }
-
-.section-padding-block .zigzag-section-inner {
-    @apply py-100 max-992:py-70;
+.opportunities-slider .card-details {
+  @apply flex-1 flex flex-col;
 }
-
-/* .ctm-private-lable .zigzag-section-inner, .ctm-who-we-are .zigzag-section-inner, .ctm-mf-oparations .zigzag-section-inner {
-    @apply pt-100 max-992:pt-44;
-} */
 
 .ctm-private-lable-slider {
     @apply bg-off-white py-100 max-992:py-70;
 }
 
-.ctm-co-manufacturing {
-    @apply bg-off-white py-100 max-992:py-70;
+.ctm-bg-off-white {
+    @apply bg-off-white;
 }
 
 .ctm-private-lable-slider .partner-slider {
     @apply pb-55 max-992:pb-44;
-}
-
-.ctm-mf-oparations {
-    @apply pt-50 pb-100 max-992:pb-70;
 }
 
 .ctm-private-lable-slider .card-details {
@@ -469,10 +470,6 @@
 
 .ctm-what-to-expert-slider .card-details h4 {
     @apply text-xl! leading-25! max-575:text-lg! max-575:leading-22!;
-}
-
-.ctm-what-to-expert-slider {
-    @apply py-100 max-992:py-70;
 }
 
 .ctm-why-partner .title-wrapper {
@@ -511,10 +508,6 @@
     @apply bg-light-green mb-0;
 }
 
-/* .white-shape-bottom {
-    @apply -mb-124 max-1600:-mb-100 max-992:-mb-70 max-769:-mb-[50px] max-575:-mb-[50px] max-[390px]:-mb-[40px] min-[2000px]:-mb-169 py-124 max-1600:py-100 max-992:py-70 max-769:py-[50px] max-575:py-[50px] max-[390px]:py-[40px] min-[2000px]:py-169;
-} */
-
 .top-minus {
     @apply -mt-124 max-1600:-mt-100 max-992:-mt-70 max-769:-mt-[50px] max-575:-mt-[50px] max-[390px]:-mt-[40px] min-[2000px]:-mt-169;
 }
@@ -531,12 +524,28 @@
     @apply bg-light-green pt-55 pb-100 max-575:pb-55;
 }
 
-.ctm-future-brands .zigzag-section-inner {
-    @apply py-55 max-992:py-44;
+.contact-information .contact-details {
+    @apply py-15 flex items-start gap-8 border-b border-grey first:border-t;
+}
+
+.contact-details a, .contact-details span {
+    @apply text-sm leading-20;
+}
+
+.contact-details .icone img {
+    @apply w-20 h-20 max-575:w-18;
+}
+
+.contact-details .icone {
+    @apply min-w-20;
 }
 
 .green-shape-top {
     @apply relative;
+}
+
+.a-hover:hover {
+    @apply text-green-73 font-bold; 
 }
 
 .ctm-py-100 {
@@ -551,16 +560,28 @@
     @apply pb-100 max-992:pb-70;
 }
 
-.ctm-pb-200 {
-    @apply pb-100 max-992:pb-70;
+.ctm-py-150 {
+    @apply py-150 max-992:py-150;
+}
+
+.ctm-pt-150 {
+    @apply pt-150 max-992:pt-100;
+}
+
+.ctm-pb-150 {
+    @apply pb-150 max-992:pb-100;
+}
+
+.ctm-pt-200 {
+    @apply pt-200 max-992:pt-100;
 }
 
 .ctm-py-200 {
     @apply py-200 max-992:py-100;
 }
 
-.ctm-pt-200 {
-    @apply pt-200 max-992:pt-100;
+.ctm-pb-200 {
+    @apply pb-100 max-992:pb-70;
 }
 
 .ctm-pb-200 {
@@ -584,7 +605,7 @@
 }
 
 .white-shape-bottom::after {
-    @apply content-[""] absolute left-0 bottom-0 -mb-1 w-full h-[126px] max-1600:h-[100px] max-992:h-[70px] max-769:h-[50px] max-575:h-[50px] max-[390px]:h-[40px] min-[2000px]:h-170 min-[500px]:bg-[url('../assets/images/white-shape.svg')] bg-[url('../assets/images/white-shape-mobile.svg')] bg-no-repeat bg-cover bg-center z-2;
+    @apply content-[""] absolute left-0 bottom-0 -mb-1 w-full h-[126px] max-1600:h-[100px] max-992:h-[70px] max-769:h-[50px] max-575:h-[50px] max-[390px]:h-[40px] min-[2000px]:h-170 min-[500px]:bg-[url('../assets/images/white-shape.svg')] bg-[url('../assets/images/white-shape-mobile.svg')] bg-no-repeat bg-cover bg-center z-9;
 }
 
 .light-green-shape-top {

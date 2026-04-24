@@ -261,10 +261,10 @@ document.addEventListener("DOMContentLoaded", () => {
         observer: true,
         observeParents: true,
         resizeObserver: true,
-        autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
-        },
+        // autoplay: {
+        //     delay: 4000,
+        //     disableOnInteraction: false,
+        // },
         speed: 700,
         effect: 'fade',
         fadeEffect: {
@@ -425,6 +425,48 @@ document.addEventListener('DOMContentLoaded', function () {
     const enableOnDesktop = slideCount >= 4;
 
     const cardsSwiper = new Swiper('.why-partner-slider', {
+        slidesPerView: 1.3,
+        spaceBetween: 28,
+        centeredSlides: true, 
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 2,
+                spaceBetween: 16,
+                centeredSlides: false,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                centeredSlides: false,
+            },
+            1280: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                centeredSlides: false,
+            },
+            1365: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                centeredSlides: false,
+                enabled: enableOnDesktop,
+            },
+        },
+    });
+});
+
+// opportunities slider
+document.addEventListener('DOMContentLoaded', function () {
+    const sliderEl = document.querySelector('.opportunities-slider');
+    if (!sliderEl) return;
+
+    const slideCount = sliderEl.querySelectorAll('.swiper-slide').length;
+    const enableOnDesktop = slideCount >= 4;
+
+    const cardsSwiper = new Swiper('.opportunities-slider', {
         slidesPerView: 1.3,
         spaceBetween: 28,
         centeredSlides: true, 
