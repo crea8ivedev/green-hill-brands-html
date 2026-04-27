@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css link -->
+    <link href="../dist/style.css" rel="stylesheet" />
+    <!-- font link -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+
+    <!-- header start -->
+    <header class="header">
+        <div class="anouncement-bar bg-primary-yellow">
+            <div class="container-55">
+                <div class="anouncement-bar-inner py-15">
+                    <div class="swiper announcement-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="content content-black bold text-center">
+                                    <p>This is the first example of a sitewide notice.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="content content-black bold text-center">
+                                    <p>This is the first example of a sitewide notice.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="content content-black bold text-center">
+                                    <p>This is the third example of a sitewide notice.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container-55">
+                <div class="header-wrapper">
+                    <div class="logo max-w-140 max-992:max-w-122"><a href="#">
+                            <div class="without-sticky">
+                                <img src="../assets/images/logo.svg" alt="" class="w-full h-full object-contain">
+                            </div>
+                            <div class="with-sticky">
+                                <img src="../assets/images/sticky-logo.svg" class="" alt="">
+                            </div>
+                        </a></div>
+
+                    <!-- Desktop Navigation -->
+                    <div class="menu-wrapper desktop-menu">
+                        <nav class="main-navigation">
+                            <ul>
+                                <li><a href="#">About Green Hill Brands</a></li>
+                                <li>
+                                    <div class="submenu-inner">
+                                        <a href="#">Capabilities</a>
+                                    </div>
+                                    <div class="submenu-wrappers">
+                                        <ul class="sub-menu submenu-wrapper">
+                                            <li><a href="#">Private Label</a></li>
+                                            <li><a href="#">Manufacturing</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="submenu-inner">
+                                        <a href="#">Brands</a>
+                                    </div>
+                                    <div class="submenu-wrappers">
+                                        <ul class="sub-menu submenu-wrapper">
+                                            <li><a href="#">Viva La Pops</a></li>
+                                            <li><a href="#">Ruby Rockets</a></li>
+                                            <li><a href="#">Mompops</a></li>
+                                            <li><a href="#">Paulina's</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="searchbar-main">
+                        <div class="search-icone">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1_19852)">
+                                    <path
+                                        d="M15.7832 14.3911L20 18.6069L18.6069 20L14.3911 15.7832C12.8224 17.0407 10.8713 17.7246 8.86088 17.7218C3.96968 17.7218 0 13.7521 0 8.86088C0 3.96968 3.96968 0 8.86088 0C13.7521 0 17.7218 3.96968 17.7218 8.86088C17.7246 10.8713 17.0407 12.8224 15.7832 14.3911ZM13.8082 13.6605C15.0574 12.3754 15.7552 10.6531 15.7527 8.86088C15.7527 5.05366 12.6681 1.96909 8.86088 1.96909C5.05366 1.96909 1.96909 5.05366 1.96909 8.86088C1.96909 12.6681 5.05366 15.7527 8.86088 15.7527C10.6531 15.7552 12.3754 15.0574 13.6605 13.8082L13.8082 13.6605Z"
+                                        fill="white" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1_19852">
+                                        <rect width="20" height="20" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="search-box">
+                            <div class="search-box-inner">
+                                <div class="search-box-input">
+                                    <svg width="15" height="15" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_search_inner)">
+                                            <path
+                                                d="M15.7832 14.3911L20 18.6069L18.6069 20L14.3911 15.7832C12.8224 17.0407 10.8713 17.7246 8.86088 17.7218C3.96968 17.7218 0 13.7521 0 8.86088C0 3.96968 3.96968 0 8.86088 0C13.7521 0 17.7218 3.96968 17.7218 8.86088C17.7246 10.8713 17.0407 12.8224 15.7832 14.3911ZM13.8082 13.6605C15.0574 12.3754 15.7552 10.6531 15.7527 8.86088C15.7527 5.05366 12.6681 1.96909 8.86088 1.96909C5.05366 1.96909 1.96909 5.05366 1.96909 8.86088C1.96909 12.6681 5.05366 15.7527 8.86088 15.7527C10.6531 15.7552 12.3754 15.0574 13.6605 13.8082L13.8082 13.6605Z"
+                                                fill="#333" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_search_inner">
+                                                <rect width="20" height="20" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <input type="text" placeholder="Search" class="search-input" aria-label="Search" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-menu-wrapper">
+                <nav class="main-navigation mobile-nav">
+                    <ul>
+                        <li><a href="#">About Green Hill Brands</a></li>
+                        <li>
+                            <div class="submenu-inner accordion-toggle" aria-expanded="false"
+                                aria-label="Toggle submenu">
+                                <a href="#">Capabilities</a>
+                                <button class="accordion-toggle" aria-expanded="false" aria-label="Toggle submenu">
+                                    <svg width="15" height="9" viewBox="0 0 15 9" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M1.49883 0L0 1.50088L7.49947 9L15 1.50088L13.5001 0L7.49947 6.00035L1.49883 0Z"
+                                            fill="#373737" />
+                                    </svg>
+
+                                </button>
+                            </div>
+                            <div class="submenu-wrapper">
+                                <ul>
+                                    <li><a href="#">Private Label</a></li>
+                                    <li><a href="#">Manufacturing</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="submenu-inner accordion-toggle" aria-expanded="false"
+                                aria-label="Toggle submenu">
+                                <a href="#">Brands</a>
+                                <button class="accordion-toggle" aria-expanded="false" aria-label="Toggle submenu">
+                                    <svg width="15" height="9" viewBox="0 0 15 9" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M1.49883 0L0 1.50088L7.49947 9L15 1.50088L13.5001 0L7.49947 6.00035L1.49883 0Z"
+                                            fill="#373737" />
+                                    </svg>
+
+                                </button>
+                            </div>
+                            <div class="submenu-wrapper">
+                                <ul>
+                                    <li><a href="#">Viva La Pops</a></li>
+                                    <li><a href="#">Ruby Rockets</a></li>
+                                    <li><a href="#">Mompops</a></li>
+                                    <li><a href="#">Paulina's</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- hro inner banner start -->
+
+    <section
+        class="hero-inner-banner white-shape-bottom bg-primary-green 992:pt-220 992:pb-200 max-992:pt-204 max-992:pb-100">
+        <div class="container-fluid pr-0!">
+            <div class="hero-banner-banner-main">
+                <div
+                    class="zigzag-wrapper flex gap-100 max-1025:gap-50 max-992:gap-44 max-992:flex-col items-stretch justify-between">
+                    <div class="zigzag-left w-1/2 max-992:w-full max-1600:flex-[0_612px] max-992:flex-1 max-992:pr-30">
+                        <div class="flex flex-col gap-25 max-992:gap-20 items-start w-full h-full justify-center">
+
+                            <div class="main-title title title-white">
+                                <h1 class="h2">Insights</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zigzag-left w-1/2 max-992:w-full max-1600:flex-[0_700px] max-992:flex-1">
+                        <div
+                            class="image-border p-30 max-992:p-20 bg-black/20 rounded-tl-[30px] rounded-bl-[30px] max-575:rounded-tl-[20px] max-575:rounded-bl-[20px]">
+                            <div class="img">
+                                <img src="../assets/images/about-us.jpg" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- hro inner banner end -->
+    <!-- blogs start -->
+    <section class="blogs blog-listing-wrapper ctm-py-55">
+        <div class="container-fluid">
+            <div class="grid-filter-row">
+                <div class="select-wrapper">
+                    <div class="filter-bar">
+                        <div class="sr-sorting">
+                            <label for="category"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_20140_5537)">
+                                        <path
+                                            d="M18.925 1.50591e-06H1.09448C0.7798 -0.000593357 0.491491 0.175089 0.347733 0.454871C0.201992 0.738421 0.227571 1.07987 0.413762 1.33883L6.94612 10.5411C6.9483 10.5443 6.95068 10.5473 6.95286 10.5504C7.19021 10.8709 7.3187 11.2591 7.3193 11.6579V19.1605C7.31791 19.3825 7.40516 19.5961 7.56161 19.7537C7.71825 19.9112 7.93121 20 8.15329 20C8.26612 19.9998 8.37795 19.9774 8.48225 19.934L12.1529 18.5345C12.4817 18.4339 12.7 18.1236 12.7 17.75V11.6579C12.7006 11.2591 12.8291 10.8709 13.0662 10.5504C13.0684 10.5473 13.0708 10.5443 13.073 10.5411L19.6055 1.33864C19.7917 1.07987 19.8173 0.73862 19.6716 0.45507C19.528 0.175089 19.2395 -0.000593357 18.925 1.50591e-06Z"
+                                            fill="#373737" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_20140_5537">
+                                            <rect width="20" height="20" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </label>
+                            <form class="filter" id="categoryFilterForm" method="GET">
+                                <!-- Hidden input that holds the actual value submitted -->
+                                <input type="hidden" name="category" id="blog-category-filter" value="">
+
+                                <div class="custom-dropdown w-full" data-dropdown>
+                                    <!-- Trigger -->
+                                    <button type="button"
+                                        class="dropdown-trigger flex items-center justify-between w-full"
+                                        data-dropdown-trigger aria-haspopup="listbox" aria-expanded="false">
+                                        <span class="flex items-center gap-2">
+                                            <span class="dropdown-label italic text-black-37" data-dropdown-label>
+                                                Filter by Category
+                                            </span>
+                                        </span>
+                                    </button>
+
+                                    <!-- Dropdown panel -->
+                                    <ul role="listbox"
+                                        class="dropdown-menu hidden absolute left-0 right-0 top-full mt-2 z-20 bg-white rounded-[21.5px] shadow-lg py-8! px-10! border-2 border-black"
+                                        data-dropdown-menu>
+                                        <li role="option"
+                                            class="dropdown-item px-20 py-12 rounded-full cursor-pointer text-black hover:bg-off-white"
+                                            data-value="access-control">
+                                            Category 1
+                                        </li>
+                                        <li role="option"
+                                            class="dropdown-item px-20 py-12 rounded-full cursor-pointer text-black hover:bg-off-white"
+                                            data-value="announcements">
+                                            Category 2
+                                        </li>
+                                        <li role="option"
+                                            class="dropdown-item px-20 py-12 rounded-full cursor-pointer text-black hover:bg-off-white"
+                                            data-value="business-security">
+                                            Category 3
+                                        </li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <form method="GET" class="search-form">
+                    <div class="search-input-wrapper">
+                        <label for="search-69cba06e95596" class="visually-hidden">Search</label>
+                        <input type="search" name="s" id="search-69cba06e95596" placeholder="Search" value=""
+                            class="blog-search-input" aria-label="Search">
+                    </div>
+                </form>
+            </div>
+
+            <!-- blog insights start -->
+            <div class="insights-wrapper border-b border-grey ctm-py-55">
+                <div
+                    class="insights-wrapper-grid grid grid-cols-3 max-992:grid-cols-2 max-575:grid-cols-1 gap-30 max-992:gap-20 items-center">
+
+                    <div class="insights-wrapper-card overflow-hidden rounded-[10px]">
+                        <a href="">
+                            <div class="insights-wrapper-card-media w-full">
+                                <img src="../assets/images/blogs1.png" height="250" width="375"
+                                    alt="Tampa Skyline Helicopter Intro"
+                                    class="w-full h-full object-cover shadow-[0px_4px_10px_rgba(0,0,0,0.1)]">
+                            </div>
+                        </a>
+                        <div class="insights-wrapper-card-body">
+                            <div class="top-content">
+                                <h4>Post Title Goes Here</h4>
+                                <div class="insights-wrapper-metas">
+                                    <div class="flex gap-20 items-center my-10">
+                                        <div class="flex items-center gap-4">
+                                            <div class="date">
+                                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M2.34375 9.375H3.90625C4.165 9.375 4.375 9.165 4.375 8.90625V7.34375C4.375 7.085 4.165 6.875 3.90625 6.875H2.34375C2.085 6.875 1.875 7.085 1.875 7.34375V8.90625C1.875 9.165 2.085 9.375 2.34375 9.375Z"
+                                                        fill="#285039" />
+                                                    <path
+                                                        d="M2.34375 13.125H3.90625C4.165 13.125 4.375 12.915 4.375 12.6563V11.0938C4.375 10.835 4.165 10.625 3.90625 10.625H2.34375C2.085 10.625 1.875 10.835 1.875 11.0938V12.6563C1.875 12.915 2.085 13.125 2.34375 13.125Z"
+                                                        fill="#285039" />
+                                                    <path
+                                                        d="M6.71875 9.375H8.28125C8.54 9.375 8.75 9.165 8.75 8.90625V7.34375C8.75 7.085 8.54 6.875 8.28125 6.875H6.71875C6.46 6.875 6.25 7.085 6.25 7.34375V8.90625C6.25 9.165 6.46 9.375 6.71875 9.375Z"
+                                                        fill="#285039" />
+                                                    <path
+                                                        d="M6.71875 13.125H8.28125C8.54 13.125 8.75 12.915 8.75 12.6563V11.0938C8.75 10.835 8.54 10.625 8.28125 10.625H6.71875C6.46 10.625 6.25 10.835 6.25 11.0938V12.6563C6.25 12.915 6.46 13.125 6.71875 13.125Z"
+                                                        fill="#285039" />
+                                                    <path
+                                                        d="M11.0938 9.375H12.6563C12.915 9.375 13.125 9.165 13.125 8.90625V7.34375C13.125 7.085 12.915 6.875 12.6563 6.875H11.0938C10.835 6.875 10.625 7.085 10.625 7.34375V8.90625C10.625 9.165 10.835 9.375 11.0938 9.375Z"
+                                                        fill="#285039" />
+                                                    <path
+                                                        d="M13.125 1.875H12.5V0.625C12.5 0.28 12.22 0 11.875 0H11.25C10.905 0 10.625 0.28 10.625 0.625V1.875H4.375V0.625C4.375 0.28 4.095 0 3.75 0H3.125C2.78 0 2.5 0.28 2.5 0.625V1.875H1.875C0.84125 1.875 0 2.71625 0 3.75V13.125C0 14.1587 0.84125 15 1.875 15H13.125C14.1587 15 15 14.1587 15 13.125V3.75C15 2.71625 14.1587 1.875 13.125 1.875ZM13.75 13.125C13.75 13.4694 13.4694 13.75 13.125 13.75H1.875C1.53062 13.75 1.25 13.4694 1.25 13.125V6.275H13.75V13.125Z"
+                                                        fill="#285039" />
+                                                </svg>
+                                            </div>
+                                            <div class="content [&_p]:font-bold! [&_p]:text-primary-green">
+                                                <p>3/31/2026</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <div class="lable">
+                                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M14.9989 6.0592L14.8632 1.14339C14.8481 0.593723 14.4056 0.1513 13.8559 0.136087L8.94007 0.000415403C8.6529 -0.00761508 8.38122 0.101051 8.17876 0.303507L0.303024 8.17928C-0.101008 8.58331 -0.101008 9.24069 0.303024 9.64473L5.35454 14.6962C5.75949 15.1012 6.41497 15.1013 6.82002 14.6962L14.6958 6.8205C14.8962 6.62004 15.0067 6.34254 14.9989 6.0592ZM12.748 4.74304C12.0594 5.43163 10.9449 5.4317 10.2563 4.74304C9.56926 4.05605 9.56926 2.93822 10.2563 2.25126C10.9449 1.56263 12.0594 1.5626 12.748 2.25126C13.435 2.93822 13.435 4.05605 12.748 4.74304Z"
+                                                        fill="#285039" />
+                                                </svg>
+
+
+
+                                            </div>
+                                            <div class="content [&_p]:font-bold! [&_p]:text-primary-green">
+                                                <p>Category</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur. Etiam sit.</p>
+                            </div>
+                            <div class="bottom-contents mt-20">
+                                <div class="readmore-btn flex items-center gap-8">
+                                    <a href="#">READ MORE</a>
+                                    <div class="btn-aerrow">
+                                        <svg width="9" height="15" viewBox="0 0 9 15" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8.24292 8.24258L1.79316 14.6921C1.38287 15.1026 0.717671 15.1026 0.307588 14.6921C-0.102529 14.282 -0.102529 13.6169 0.307588 13.2068L6.01463 7.49989L0.307753 1.79321C-0.102363 1.38293 -0.102363 0.717829 0.307753 0.307712C0.71787 -0.102571 1.38304 -0.102571 1.79332 0.307712L8.24308 6.75737C8.44814 6.96253 8.55056 7.23113 8.55056 7.49986C8.55056 7.76872 8.44794 8.03752 8.24292 8.24258Z"
+                                                fill="#73A027"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="insights-wrapper-card overflow-hidden rounded-[10px]">
+                        <a href="">
+                            <div class="insights-wrapper-card-media w-full">
+                                <img src="../assets/images/blogs1.png" height="250" width="375"
+                                    alt="Tampa Skyline Helicopter Intro"
+                                    class="w-full h-full object-cover shadow-[0px_4px_10px_rgba(0,0,0,0.1)]">
+                            </div>
+                        </a>
+                        <div class="insights-wrapper-card-body">
+                            <div class="top-content">
+                                <h4>Post Title Goes Here</h4>
+                                <div class="insights-wrapper-metas">
+                                    <div class="flex gap-20 items-center my-10">
+                                        <div class="flex items-center gap-4">
+                                            <div class="date">
+                                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M2.34375 9.375H3.90625C4.165 9.375 4.375 9.165 4.375 8.90625V7.34375C4.375 7.085 4.165 6.875 3.90625 6.875H2.34375C2.085 6.875 1.875 7.085 1.875 7.34375V8.90625C1.875 9.165 2.085 9.375 2.34375 9.375Z"
+                                                        fill="#285039" />
+                                                    <path
+                                                        d="M2.34375 13.125H3.90625C4.165 13.125 4.375 12.915 4.375 12.6563V11.0938C4.375 10.835 4.165 10.625 3.90625 10.625H2.34375C2.085 10.625 1.875 10.835 1.875 11.0938V12.6563C1.875 12.915 2.085 13.125 2.34375 13.125Z"
+                                                        fill="#285039" />
+                                                    <path
+                                                        d="M6.71875 9.375H8.28125C8.54 9.375 8.75 9.165 8.75 8.90625V7.34375C8.75 7.085 8.54 6.875 8.28125 6.875H6.71875C6.46 6.875 6.25 7.085 6.25 7.34375V8.90625C6.25 9.165 6.46 9.375 6.71875 9.375Z"
+                                                        fill="#285039" />
+                                                    <path
+                                                        d="M6.71875 13.125H8.28125C8.54 13.125 8.75 12.915 8.75 12.6563V11.0938C8.75 10.835 8.54 10.625 8.28125 10.625H6.71875C6.46 10.625 6.25 10.835 6.25 11.0938V12.6563C6.25 12.915 6.46 13.125 6.71875 13.125Z"
+                                                        fill="#285039" />
+                                                    <path
+                                                        d="M11.0938 9.375H12.6563C12.915 9.375 13.125 9.165 13.125 8.90625V7.34375C13.125 7.085 12.915 6.875 12.6563 6.875H11.0938C10.835 6.875 10.625 7.085 10.625 7.34375V8.90625C10.625 9.165 10.835 9.375 11.0938 9.375Z"
+                                                        fill="#285039" />
+                                                    <path
+                                                        d="M13.125 1.875H12.5V0.625C12.5 0.28 12.22 0 11.875 0H11.25C10.905 0 10.625 0.28 10.625 0.625V1.875H4.375V0.625C4.375 0.28 4.095 0 3.75 0H3.125C2.78 0 2.5 0.28 2.5 0.625V1.875H1.875C0.84125 1.875 0 2.71625 0 3.75V13.125C0 14.1587 0.84125 15 1.875 15H13.125C14.1587 15 15 14.1587 15 13.125V3.75C15 2.71625 14.1587 1.875 13.125 1.875ZM13.75 13.125C13.75 13.4694 13.4694 13.75 13.125 13.75H1.875C1.53062 13.75 1.25 13.4694 1.25 13.125V6.275H13.75V13.125Z"
+                                                        fill="#285039" />
+                                                </svg>
+                                            </div>
+                                            <div class="content [&_p]:font-bold! [&_p]:text-primary-green">
+                                                <p>3/31/2026</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <div class="lable">
+                                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M14.9989 6.0592L14.8632 1.14339C14.8481 0.593723 14.4056 0.1513 13.8559 0.136087L8.94007 0.000415403C8.6529 -0.00761508 8.38122 0.101051 8.17876 0.303507L0.303024 8.17928C-0.101008 8.58331 -0.101008 9.24069 0.303024 9.64473L5.35454 14.6962C5.75949 15.1012 6.41497 15.1013 6.82002 14.6962L14.6958 6.8205C14.8962 6.62004 15.0067 6.34254 14.9989 6.0592ZM12.748 4.74304C12.0594 5.43163 10.9449 5.4317 10.2563 4.74304C9.56926 4.05605 9.56926 2.93822 10.2563 2.25126C10.9449 1.56263 12.0594 1.5626 12.748 2.25126C13.435 2.93822 13.435 4.05605 12.748 4.74304Z"
+                                                        fill="#285039" />
+                                                </svg>
+
+
+
+                                            </div>
+                                            <div class="content [&_p]:font-bold! [&_p]:text-primary-green">
+                                                <p>Category</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur. Etiam sit.</p>
+                            </div>
+                            <div class="bottom-contents mt-20">
+                                <div class="readmore-btn flex items-center gap-8">
+                                    <a href="#">READ MORE</a>
+                                    <div class="btn-aerrow">
+                                        <svg width="9" height="15" viewBox="0 0 9 15" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8.24292 8.24258L1.79316 14.6921C1.38287 15.1026 0.717671 15.1026 0.307588 14.6921C-0.102529 14.282 -0.102529 13.6169 0.307588 13.2068L6.01463 7.49989L0.307753 1.79321C-0.102363 1.38293 -0.102363 0.717829 0.307753 0.307712C0.71787 -0.102571 1.38304 -0.102571 1.79332 0.307712L8.24308 6.75737C8.44814 6.96253 8.55056 7.23113 8.55056 7.49986C8.55056 7.76872 8.44794 8.03752 8.24292 8.24258Z"
+                                                fill="#73A027"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="insights-wrapper-card overflow-hidden rounded-[10px]">
+                        <a href="">
+                            <div class="insights-wrapper-card-media w-full">
+                                <img src="../assets/images/blogs1.png" height="250" width="375"
+                                    alt="Tampa Skyline Helicopter Intro"
+                                    class="w-full h-full object-cover shadow-[0px_4px_10px_rgba(0,0,0,0.1)]">
+                            </div>
+                        </a>
+                        <div class="insights-wrapper-card-body">
+                            <div class="top-content">
+                                <h4>Post Title Goes Here</h4>
+                                <div class="insights-wrapper-metas">
+                                    <div class="flex gap-20 items-center my-10">
+                                        <div class="flex items-center gap-4">
+                                            <div class="date">
+                                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M2.34375 9.375H3.90625C4.165 9.375 4.375 9.165 4.375 8.90625V7.34375C4.375 7.085 4.165 6.875 3.90625 6.875H2.34375C2.085 6.875 1.875 7.085 1.875 7.34375V8.90625C1.875 9.165 2.085 9.375 2.34375 9.375Z"
+                                                        fill="#285039" />
+                                                    <path
+                                                        d="M2.34375 13.125H3.90625C4.165 13.125 4.375 12.915 4.375 12.6563V11.0938C4.375 10.835 4.165 10.625 3.90625 10.625H2.34375C2.085 10.625 1.875 10.835 1.875 11.0938V12.6563C1.875 12.915 2.085 13.125 2.34375 13.125Z"
+                                                        fill="#285039" />
+                                                    <path
+                                                        d="M6.71875 9.375H8.28125C8.54 9.375 8.75 9.165 8.75 8.90625V7.34375C8.75 7.085 8.54 6.875 8.28125 6.875H6.71875C6.46 6.875 6.25 7.085 6.25 7.34375V8.90625C6.25 9.165 6.46 9.375 6.71875 9.375Z"
+                                                        fill="#285039" />
+                                                    <path
+                                                        d="M6.71875 13.125H8.28125C8.54 13.125 8.75 12.915 8.75 12.6563V11.0938C8.75 10.835 8.54 10.625 8.28125 10.625H6.71875C6.46 10.625 6.25 10.835 6.25 11.0938V12.6563C6.25 12.915 6.46 13.125 6.71875 13.125Z"
+                                                        fill="#285039" />
+                                                    <path
+                                                        d="M11.0938 9.375H12.6563C12.915 9.375 13.125 9.165 13.125 8.90625V7.34375C13.125 7.085 12.915 6.875 12.6563 6.875H11.0938C10.835 6.875 10.625 7.085 10.625 7.34375V8.90625C10.625 9.165 10.835 9.375 11.0938 9.375Z"
+                                                        fill="#285039" />
+                                                    <path
+                                                        d="M13.125 1.875H12.5V0.625C12.5 0.28 12.22 0 11.875 0H11.25C10.905 0 10.625 0.28 10.625 0.625V1.875H4.375V0.625C4.375 0.28 4.095 0 3.75 0H3.125C2.78 0 2.5 0.28 2.5 0.625V1.875H1.875C0.84125 1.875 0 2.71625 0 3.75V13.125C0 14.1587 0.84125 15 1.875 15H13.125C14.1587 15 15 14.1587 15 13.125V3.75C15 2.71625 14.1587 1.875 13.125 1.875ZM13.75 13.125C13.75 13.4694 13.4694 13.75 13.125 13.75H1.875C1.53062 13.75 1.25 13.4694 1.25 13.125V6.275H13.75V13.125Z"
+                                                        fill="#285039" />
+                                                </svg>
+                                            </div>
+                                            <div class="content [&_p]:font-bold! [&_p]:text-primary-green">
+                                                <p>3/31/2026</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <div class="lable">
+                                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M14.9989 6.0592L14.8632 1.14339C14.8481 0.593723 14.4056 0.1513 13.8559 0.136087L8.94007 0.000415403C8.6529 -0.00761508 8.38122 0.101051 8.17876 0.303507L0.303024 8.17928C-0.101008 8.58331 -0.101008 9.24069 0.303024 9.64473L5.35454 14.6962C5.75949 15.1012 6.41497 15.1013 6.82002 14.6962L14.6958 6.8205C14.8962 6.62004 15.0067 6.34254 14.9989 6.0592ZM12.748 4.74304C12.0594 5.43163 10.9449 5.4317 10.2563 4.74304C9.56926 4.05605 9.56926 2.93822 10.2563 2.25126C10.9449 1.56263 12.0594 1.5626 12.748 2.25126C13.435 2.93822 13.435 4.05605 12.748 4.74304Z"
+                                                        fill="#285039" />
+                                                </svg>
+
+
+
+                                            </div>
+                                            <div class="content [&_p]:font-bold! [&_p]:text-primary-green">
+                                                <p>Category</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur. Etiam sit.</p>
+                            </div>
+                            <div class="bottom-contents mt-20">
+                                <div class="readmore-btn flex items-center gap-8">
+                                    <a href="#">READ MORE</a>
+                                    <div class="btn-aerrow">
+                                        <svg width="9" height="15" viewBox="0 0 9 15" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8.24292 8.24258L1.79316 14.6921C1.38287 15.1026 0.717671 15.1026 0.307588 14.6921C-0.102529 14.282 -0.102529 13.6169 0.307588 13.2068L6.01463 7.49989L0.307753 1.79321C-0.102363 1.38293 -0.102363 0.717829 0.307753 0.307712C0.71787 -0.102571 1.38304 -0.102571 1.79332 0.307712L8.24308 6.75737C8.44814 6.96253 8.55056 7.23113 8.55056 7.49986C8.55056 7.76872 8.44794 8.03752 8.24292 8.24258Z"
+                                                fill="#73A027"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            <!-- blog end start -->
+
+
+    <!-- footer start -->
+
+    <footer class="site-footer">
+        <div class="container-55">
+            <div class="site-footer__panel">
+                <div class="site-footer__newsletter">
+                    <div class="site-footer__newsletter-title">
+                        <h4 class="site-footer__title">Stay Up To Date With Industry Insights</h4>
+                    </div>
+                    <form class="site-footer__form" action="#" method="post">
+                        <label class="sr-only" for="footer-email">Email Address</label>
+                        <input id="footer-email" class="site-footer__input" type="email" name="email"
+                            placeholder="Email Address">
+                        <button class="btn-yellow" type="submit">Subscribe</button>
+                    </form>
+                </div>
+
+                <nav class="site-footer__nav" aria-label="Footer navigation">
+                    <ul>
+                        <li><a href="#">Accessibility Statement</a></li>
+                        <li><a href="#">Insights</a></li>
+                        <li><a href="#">Terms &amp; Conditions</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Investors</a></li>
+                    </ul>
+                </nav>
+
+                <div class="site-footer__meta">
+                    <div class="flex gap-10 items-center">
+                        <a class="site-footer__social" href="#" aria-label="LinkedIn">
+                            <img src="../assets/images/linkdin.svg" alt="">
+                        </a>
+                        <a class="site-footer__social" href="#" aria-label="LinkedIn">
+                            <img src="../assets/images/linkdin.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="site-footer__copyright-main">
+                        <p class="site-footer__copyright">
+                            &copy; 2026
+                            <a href="#">Green Hill Brands</a>
+                        </p>
+                    </div>
+                    <div class="site-footer__credit-main">
+                        <a class="site-footer__credit" href="#" aria-label="TechScouts">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 0 3700 552" id="techyscouts-logo"
+                                    aria-labelledby="techyscouts-logo-title" role="img">
+                                    <title id="techyscouts-logo-title">Made with love by TechyScouts</title>
+                                    <style>
+                                        #techyscouts-logo {
+                                            display: inline-block;
+                                            fill: currentColor;
+                                            height: 20px;
+                                            width: auto;
+                                            vertical-align: middle;
+                                        }
+
+                                        .site-footer__credit:hover #techyscouts-logo-heart,
+                                        .site-footer__credit:focus #techyscouts-logo-heart {
+                                            animation: ts-heart-beat 2s infinite ease-in-out 0.6s;
+                                        }
+
+
+                                        .site-footer__credit:hover #techyscouts-logo-text,
+                                        .site-footer__credit:focus #techyscouts-logo-text {
+                                            animation: ts-draw-logo 2s forwards;
+                                        }
+
+                                        .site-footer__credit #techyscouts-logo-text {
+                                            stroke-width: 34px !important;
+                                        }
+
+                                        .site-footer__credit:hover #techyscouts-logo-line-1,
+                                        .site-footer__credit:hover #techyscouts-logo-line-2,
+                                        .site-footer__credit:focus #techyscouts-logo-line-1,
+                                        .site-footer__credit:focus #techyscouts-logo-line-2 {
+                                            animation: ts-swoop-down 0.5s forwards ease-out;
+                                        }
+
+                                        .site-footer__credit:hover #techyscouts-logo-line-2,
+                                        .site-footer__credit:focus #techyscouts-logo-line-2 {
+                                            animation-name: ts-swoop-up;
+                                        }
+
+                                        @keyframes ts-heart-beat {
+                                            5% {
+                                                transform: scale(1.1);
+                                                fill: #F2B525;
+                                            }
+
+                                            10% {
+                                                transform: scale(0.9);
+                                            }
+
+                                            15% {
+                                                transform: scale(1.2);
+                                                fill: #F2B525;
+                                            }
+
+                                            40% {
+                                                transform: scale(1);
+                                                stroke-width: 0;
+                                            }
+                                        }
+
+                                        @keyframes ts-draw-logo {
+                                            0% {
+                                                stroke-dasharray: 2600;
+                                                stroke-dashoffset: 2600;
+                                            }
+
+                                            100% {
+                                                stroke-dashoffset: 0;
+                                            }
+                                        }
+
+                                        @keyframes ts-swoop-down {
+                                            0% {
+                                                transform: translateY(-100%) rotate(10deg);
+                                            }
+                                        }
+
+                                        @keyframes ts-swoop-up {
+                                            0% {
+                                                transform: translateY(100%) rotate(-10deg);
+                                            }
+                                        }
+                                    </style>
+                                    <path id="techyscouts-logo-heart" style="transform-origin:10% 50%;"
+                                        d="M436 257L255 427 73 257a81 81 0 0 1-25-62c0-23 4-42 22-59 17-15 38-23 62-23 23 0 45 14 61 29l62 54 62-54c16-15 38-29 61-29 24 0 45 8 61 23 19 17 23 36 23 59 0 24-7 46-26 62m32-154c-50-46-130-46-179 0l-34 30-34-30c-49-46-130-46-179 0-56 51-56 134 0 185l213 196 213-196c56-51 56-134 0-185" />
+                                    <path id="techyscouts-logo-line-1" d="M803 372L1016 0l34 20-213 372-34-20z" />
+                                    <path id="techyscouts-logo-line-2" d="M879 552l-33-20 213-372 33 20-213 372z" />
+                                    <path id="techyscouts-logo-text"
+                                        d="M3491.171 318.855c11.336 52.417-38.612 83.584-85.725 83.584-36.132 0-80.058-20.542-84.308-60.563l-.355-2.48 5.668-.708.354 2.48c3.897 37.188 45.343 55.959 78.995 55.959 43.217 0 89.976-27.98 79.704-77.21-15.941-73.667-155.865-6.375-162.241-98.814-1.417-14.875 2.48-29.396 11.69-41.438 36.132-46.75 138.152-40.73 150.196 23.376l.355 2.833-5.314 1.062-.354-2.833c-2.126-10.27-6.376-19.125-13.461-26.917-15.232-16.292-39.675-23.021-61.992-22.667-23.38.354-49.947 8.854-64.825 28.334-8.856 10.98-12.044 24.083-10.981 37.896 6.376 86.772 145.591 18.771 162.594 98.106zm-254.34 82.168h-5.314V157.707h-85.725v-5.667h176.764v5.667h-85.725v243.316zm-198.366 1.77c-41.092 0-86.788-24.083-86.788-70.125V152.394h5.667v180.628c0 42.855 43.217 64.105 81.12 64.105 37.904 0 81.121-21.25 81.121-64.46V152.395h5.668v180.628c0 45.688-46.05 69.772-86.788 69.772zm-239.105.709c-34.715 0-66.596-14.167-89.267-37.542-22.672-23.021-37.195-54.897-37.195-89.96 0-35.063 14.523-66.938 37.195-89.96 22.67-23.375 54.552-37.542 89.267-37.542 35.07 0 66.597 14.167 89.622 37.542 22.671 23.022 37.195 54.897 37.195 89.96 0 35.063-14.524 66.939-37.195 89.96-23.025 23.375-54.552 37.542-89.622 37.542zm85.726-213.212c-21.963-22.312-52.427-36.125-85.726-36.125-33.298 0-63.408 13.813-85.37 36.125-21.61 21.959-35.425 52.064-35.425 85.71 0 33.646 13.816 63.75 35.424 85.71 21.963 22.312 52.073 36.125 85.371 36.125 33.299 0 63.763-13.813 85.726-36.125 21.608-21.96 35.07-52.064 35.07-85.71 0-33.646-13.462-63.751-35.07-85.71zM2544.67 394.648c31.882 0 60.93-13.459 81.83-35.063 9.564-9.917 17.711-21.25 23.379-34.355h6.022c-6.022 14.52-14.878 27.625-25.505 38.605-21.963 22.667-52.073 36.48-85.726 36.48-33.652 0-63.762-13.813-85.725-36.48-21.608-22.313-35.424-53.126-35.424-87.48 0-34.001 13.816-64.814 35.424-87.127 21.963-22.667 52.073-36.48 85.725-36.48 33.653 0 63.763 13.813 85.726 36.48 10.627 10.98 19.483 24.084 25.505 38.605h-6.022c-5.668-13.105-13.815-24.792-23.38-34.71-20.9-21.604-49.947-34.708-81.829-34.708-31.88 0-60.928 13.104-81.828 34.709-20.9 21.604-34.007 51-34.007 83.23 0 32.584 13.107 61.98 34.007 83.23 20.9 21.605 49.947 35.064 81.828 35.064zm-228.124 7.791c-36.132 0-80.058-20.542-84.309-60.563l-.354-2.48 5.668-.708.354 2.48c3.897 37.188 45.343 55.959 78.995 55.959 43.217 0 89.977-27.98 79.704-77.21-15.941-73.667-155.865-6.375-162.24-98.814-1.418-14.875 2.479-29.396 11.689-41.438 36.132-46.75 138.152-40.73 150.196 23.376l.355 2.833-5.314 1.062-.354-2.833c-2.126-10.27-6.376-19.125-13.461-26.917-15.232-16.292-39.675-23.021-61.992-22.667-23.38.354-49.947 8.854-64.825 28.334-8.856 10.98-12.044 24.083-10.981 37.896 6.376 86.772 145.591 18.771 162.594 98.106 11.336 52.417-38.611 83.584-85.725 83.584zm-182.426-2.479h-5.668V297.605l-91.039-145.211h6.73l87.143 139.544 87.143-139.544h6.73l-91.039 145.21V399.96zm-120.08-122.897h-155.51V399.96h-5.313V152.394h5.314V271.75h155.51V152.394h5.668V399.96h-5.668V277.063zm-298.26 117.585c31.881 0 60.929-13.459 81.829-35.063 9.564-9.917 17.711-21.25 23.38-34.355h6.021c-6.022 14.52-14.878 27.625-25.505 38.605-21.962 22.667-52.073 36.48-85.725 36.48-33.653 0-63.763-13.813-85.726-36.48-21.608-22.313-35.423-53.126-35.423-87.48 0-34.001 13.815-64.814 35.423-87.127 21.963-22.667 52.073-36.48 85.726-36.48 33.652 0 63.763 13.813 85.725 36.48 10.627 10.98 19.483 24.084 25.505 38.605h-6.022c-5.668-13.105-13.815-24.792-23.38-34.71-20.9-21.604-49.947-34.708-81.828-34.708-31.882 0-60.929 13.104-81.829 34.709-20.9 21.604-34.007 51-34.007 83.23 0 32.584 13.107 61.98 34.007 83.23 20.9 21.605 49.947 35.064 81.829 35.064zm-277.365 5.312V152.394h136.736v5.313h-131.068v115.46h128.234v5.666h-128.234v115.815h131.776v5.312h-137.444zm-106.975 1.063h-5.314V157.707h-85.725v-5.667h176.764v5.667h-85.725v243.316z"
+                                        style="fill:none;stroke:currentColor;stroke-width:13;" />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- footer end -->
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script type="module" src="../assets/js/script.js"></script>
+
+</html>

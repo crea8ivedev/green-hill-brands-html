@@ -499,3 +499,49 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     });
 });
+
+// blogs listing 
+
+document.querySelectorAll('[data-dropdown]').forEach(dropdown => {
+    const trigger = dropdown.querySelector('[data-dropdown-trigger]');
+    const menu    = dropdown.querySelector('[data-dropdown-menu]');
+    const caret   = dropdown.querySelector('[data-dropdown-caret]');
+    const label   = dropdown.querySelector('[data-dropdown-label]');
+    const hidden  = document.getElementById('blog-category-filter');
+
+    const close = () => {
+      menu.classList.add('hidden');
+      caret.classList.remove('rotate-180');
+      trigger.setAttribute('aria-expanded', 'false');
+    };
+    const open = () => {
+      menu.classList.remove('hidden');
+      caret.classList.add('rotate-180');
+      trigger.setAttribute('aria-expanded', 'true');
+    };
+
+    trigger.addEventListener('click', () => {
+      menu.classList.contains('hidden') ? open() : close();
+    });
+
+    menu.querySelectorAll('.dropdown-item').forEach(item => {
+      item.addEventListener('click', () => {
+        // visual selection
+        menu.querySelectorAll('.dropdown-item').forEach(i => i.classList.remove('bg-[#FBE9D0]'));
+        item.classList.add('bg-[#FBE9D0]');
+
+        // update label + hidden value
+        label.textContent = item.textContent.trim();
+        label.classList.remove('italic', 'text-gray-500');
+        label.classList.add('text-black');
+        hidden.value = item.dataset.value;
+
+        close();
+        document.getElementById('categoryFilterForm').submit();
+      });
+    });
+
+    document.addEventListener('click', e => {
+      if (!dropdown.contains(e.target)) close();
+    });
+  });
