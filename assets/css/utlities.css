@@ -30,7 +30,7 @@
 
 .zigzag-right .video video,
 .mobile-video-bg .video video {
-    @apply absolute top-0 left-0 w-full h-full object-cover;
+    @apply absolute top-0 left-0 w-full h-full object-cover rounded-[10px];
 }
 
 .video.playing .video-control {
@@ -80,6 +80,12 @@
 }
 
 /* hero image banner start */
+
+@media (max-width: 992px) {
+    .hero-image-banner .zigzag-content-wraaper {
+        @apply pointer-events-none!;
+    }
+}
 
 .mobile-slider-bg {
     @apply absolute inset-0 w-full h-full z-0;
@@ -165,7 +171,7 @@
 }
 
 .hero-mobile-pagination {
-    @apply relative bottom-80 z-10 px-30 pb-50;
+    @apply relative bottom-50 z-10 px-30 pb-50;
 }
 
 .hero-swiper-mobile-pagination {
@@ -212,6 +218,10 @@
 
 .hero-inner-banner  .zigzag-left .brand-logo  {
     @apply absolute top-1/2 left-1/2 -translate-1/2;
+}
+
+.hero-image-banner .shape-line {
+    @apply max-992:hidden;
 }
 
 /* hero banner end */
@@ -361,7 +371,7 @@
     @apply scale-105;
 }
 
-.card-inner:hover .card-link-aerrow, .ctm-card-grid:hover .btn-aerrow, .insights-wrapper-card:hover .btn-aerrow {
+.card-inner:hover .card-link-aerrow, .ctm-card-grid:hover .btn-aerrow, .insights-wrapper-card:hover .btn-aerrow, .readmore-btn:hover .btn-aerrow {
     @apply translate-x-5;
 }
 
@@ -528,8 +538,16 @@
     @apply py-55 bg-primary-green;
 }
 
+.video-zizag .global-list ul li, .ctm-company-feature .global-list ul li {
+    @apply py-55 bg-primary-green;
+}
+
 .ctm-manufacturing .zigzag-section-inner, .ctm-perspective .zigzag-section-inner, .ctm-why-partner .zigzag-section-inner {
     @apply bg-light-green pt-55 pb-100 max-575:pb-55;
+}
+
+.ctm-manufacturing .global-list ul li , .ctm-perspective .global-list ul li, .ctm-why-partner .global-list ul li {
+    @apply text-white;
 }
 
 .contact-information .contact-details {
@@ -618,6 +636,30 @@
 
 .ctm-pb-200 {
     @apply pb-200 max-992:pb-100;
+}
+
+.ctm-py-124 {
+    @apply py-124 max-992:py-124;
+}
+
+.ctm-pt-124 {
+    @apply pt-124 max-992:pt-124;
+}
+
+.ctm-pb-124 {
+    @apply pb-124 max-992:pb-124;
+}
+
+.ctm-py-180 {
+    @apply py-180 max-992:py-180;
+}
+
+.ctm-pt-180 {
+    @apply pt-180 max-992:pt-180;
+}
+
+.ctm-pb-180 {
+    @apply pb-180 max-992:pb-180;
 }
 
 .green-shape-top::before {
@@ -786,3 +828,88 @@
 }
 
 /* blogs end */
+
+
+/* company overview section start */
+
+.ctm-press-insights .zigzag-section-inner {
+    @apply bg-light-green;
+}
+
+.ctm-company-overview {
+    @apply bg-off-white;
+}
+
+.ctm-company-overview-stock {
+    @apply flex-1 max-992:w-full;
+}
+
+.ctm-stock-card {
+    @apply bg-primary-green rounded-[40px] p-40 max-992:p-30 max-575:p-24 flex flex-col gap-30 max-992:gap-20;
+}
+
+.ctm-stock-card-price {
+    @apply flex items-center justify-between gap-10;
+}
+
+.ctm-stock-change {
+    @apply flex items-center gap-12;
+}
+
+.ctm-stock-percent p {
+    @apply font-semibold text-body-1 leading-normal;
+}
+
+.ctm-stock-arrow {
+    @apply flex items-center justify-center shrink-0;
+}
+
+.ctm-stock-arrow img {
+    @apply w-24 h-24 object-contain;
+}
+
+.ctm-company-overview-brands {
+    @apply flex flex-col items-center gap-40 max-992:gap-30;
+}
+
+.ctm-brands-logos {
+    @apply flex items-center justify-center flex-wrap py-30 max-992:py-0 gap-60 max-992:gap-40 max-575:gap-25 max-575:grid max-575:grid-cols-2;
+}
+
+.ctm-brand-logo-item {
+    @apply flex items-center justify-center;
+}
+
+.ctm-brand-logo-item img {
+    @apply object-contain max-h-120 max-992:max-h-70 max-575:max-h-60;
+}
+
+.ctm-company-overview-copy .pre-title h4 {
+    @apply max-575:min-w-200;
+}
+
+/* company overview section end */
+
+/* investor relations section start */
+
+.ctm-investor-relations {
+    @apply bg-white;
+}
+
+.ctm-investor-relations-grid {
+    @apply flex items-start justify-between gap-30 max-xl:grid max-xl:grid-cols-3 max-767:grid-cols-2! max-992:justify-center max-575:gap-20;
+}
+
+.ctm-investor-card {
+    @apply flex flex-col items-center gap-30 max-xl:gap-20 max-w-180 max-575:max-w-150 mx-auto;
+}
+
+.ctm-investor-card-icon {
+    @apply bg-primary-green rounded-full p-50 max-xl:p-35 max-575:p-25! flex items-center justify-center;
+}
+
+.ctm-investor-card-icon img {
+    @apply w-80 h-80 max-xl:w-60 max-xl:h-60 max-575:w-45! max-575:h-45! object-contain;
+}
+
+/* investor relations section end */

@@ -352,7 +352,7 @@
 }
 
 .site-footer__form {
-    @apply flex items-center gap-10;
+    @apply flex items-center gap-10 max-992:items-start!;
 }
 
 .site-footer__input {
